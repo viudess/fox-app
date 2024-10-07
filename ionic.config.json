@@ -1,0 +1,7 @@
+{
+  "name": "foxpectrumAPP",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
