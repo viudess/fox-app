@@ -1,3 +1,4 @@
+import { NavbarComponent } from './../components/navbar/navbar.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
@@ -12,8 +13,12 @@ import { HomePageRoutingModule } from './home-routing.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+
   ],
-  declarations: [HomePage]
+  declarations: [
+    HomePage,
+    NavbarComponent
+  ]
 })
 export class HomePageModule {}
