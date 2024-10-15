@@ -36,6 +36,26 @@ import { AddtasksAtipComponent } from './pages/atipico/order/addtasks-atip/addta
 import { AddcalendarAtipComponent } from './pages/atipico/order/addcalendar-atip/addcalendar-atip.component';
 import { PerfilAtipComponent } from './pages/atipico/custom/perfil-atip/perfil-atip.component';
 import { PerfilsettingsAtipComponent } from './pages/atipico/custom/perfilsettings-atip/perfilsettings-atip.component';
+import { AddwishAtipComponent } from './pages/atipico/custom/addwish-atip/addwish-atip.component';
+import { AddmedicationAtipComponent } from './pages/atipico/custom/addmedication-atip/addmedication-atip.component';
+import { MedicationAtipComponent } from './pages/atipico/custom/id/medication-atip/medication-atip.component';
+import { WishAtipComponent } from './pages/atipico/custom/id/wish-atip/wish-atip.component';
+import { NavbarComponent } from './components/general/navbar/navbar.component';
+import { HeaderComponent } from './components/general/header/header.component';
+import { BannerComponent } from './components/home/banner/banner.component';
+import { RadioComponent } from './components/general/radio/radio.component';
+import { AddmoodComponent } from './components/mood/addmood/addmood.component';
+import { MoodcardComponent } from './components/mood/moodcard/moodcard.component';
+import { CalendarComponent } from './components/order/calendar/calendar.component';
+import { TodoComponent } from './components/order/todo/todo.component';
+import { EmotionComponent } from './components/mood/emotion/emotion.component';
+import { DaybuttomComponent } from './components/mood/daybuttom/daybuttom.component';
+import { EventComponent } from './components/order/event/event.component';
+import { EventlistComponent } from './components/order/eventlist/eventlist.component';
+import { RemedyComponent } from './components/custom/remedy/remedy.component';
+import { RemedylistComponent } from './components/custom/remedylist/remedylist.component';
+import { WishlistComponent } from './components/custom/wishlist/wishlist.component';
+import { CrisisbuttomComponent } from './components/home/crisisbuttom/crisisbuttom.component';
 
 @NgModule({
   declarations: [
@@ -72,7 +92,27 @@ import { PerfilsettingsAtipComponent } from './pages/atipico/custom/perfilsettin
     AddtasksAtipComponent,
     AddcalendarAtipComponent,
     PerfilAtipComponent,
-    PerfilsettingsAtipComponent
+    PerfilsettingsAtipComponent,
+    AddmedicationAtipComponent,
+    AddwishAtipComponent,
+    MedicationAtipComponent,
+    WishAtipComponent,
+    NavbarComponent,
+    HeaderComponent,
+    BannerComponent,
+    RadioComponent,
+    AddmoodComponent,
+    MoodcardComponent,
+    CalendarComponent,
+    TodoComponent,
+    EmotionComponent,
+    DaybuttomComponent,
+    EventComponent,
+    EventlistComponent,
+    RemedyComponent,
+    RemedylistComponent,
+    WishlistComponent,
+    CrisisbuttomComponent,
   ],
   imports: [
     BrowserModule,
