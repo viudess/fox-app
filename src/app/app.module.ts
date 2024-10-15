@@ -28,6 +28,14 @@ import { CustomuseratipComponent } from './pages/log/customuseratip/customuserat
 import { FamcreateComponent } from './pages/log/famcreate/famcreate.component';
 import { FamenterComponent } from './pages/log/famenter/famenter.component';
 import { CustomuserprofComponent } from './pages/log/customuserprof/customuserprof.component';
+import { MoodbegginAtipComponent } from './pages/atipico/mood/moodbeggin-atip/moodbeggin-atip.component';
+import { MoodformsAtipComponent } from './pages/atipico/mood/moodforms-atip/moodforms-atip.component';
+import { MoodquestionAtipComponent } from './pages/atipico/mood/moodquestion-atip/moodquestion-atip.component';
+import { TasksAtipComponent } from './pages/atipico/order/tasks-atip/tasks-atip.component';
+import { AddtasksAtipComponent } from './pages/atipico/order/addtasks-atip/addtasks-atip.component';
+import { AddcalendarAtipComponent } from './pages/atipico/order/addcalendar-atip/addcalendar-atip.component';
+import { PerfilAtipComponent } from './pages/atipico/custom/perfil-atip/perfil-atip.component';
+import { PerfilsettingsAtipComponent } from './pages/atipico/custom/perfilsettings-atip/perfilsettings-atip.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +64,15 @@ import { CustomuserprofComponent } from './pages/log/customuserprof/customuserpr
     CustomuseratipComponent,
     FamcreateComponent,
     FamenterComponent,
-    CustomuserprofComponent
+    CustomuserprofComponent,
+    MoodbegginAtipComponent,
+    MoodformsAtipComponent,
+    MoodquestionAtipComponent,
+    TasksAtipComponent,
+    AddtasksAtipComponent,
+    AddcalendarAtipComponent,
+    PerfilAtipComponent,
+    PerfilsettingsAtipComponent
   ],
   imports: [
     BrowserModule,
