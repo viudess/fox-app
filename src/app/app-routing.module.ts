@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
+//tipico
 import { HometipComponent } from './pages/tipico/hometip/hometip.component';
 import { MoodbegginComponent } from './pages/tipico/mood/moodbeggin/moodbeggin.component';
 import { TasksComponent } from './pages/tipico/order/tasks/tasks.component';
@@ -12,7 +14,32 @@ import { AddmedicationComponent } from './pages/tipico/custom/addmedication/addm
 import { AddwishComponent } from './pages/tipico/custom/addwish/addwish.component';
 import { MedicationComponent } from './pages/tipico/custom/id/medication/medication.component';
 import { WishComponent } from './pages/tipico/custom/id/wish/wish.component';
+
+//login
 import { RegisterComponent } from './pages/log/register/register.component';
+import { LoginComponent } from './pages/log/login/login.component';
+import { UserchoiceComponent } from './pages/log/userchoice/userchoice.component';
+import { AcessibilityComponent } from './pages/log/acessibility/acessibility.component';
+import { CustomuserComponent } from './pages/log/customuser/customuser.component';
+import { CustomuseratipComponent } from './pages/log/customuseratip/customuseratip.component';
+import { CustomuserprofComponent } from './pages/log/customuserprof/customuserprof.component';
+import { FamcreateComponent } from './pages/log/famcreate/famcreate.component';
+import { FamenterComponent } from './pages/log/famenter/famenter.component';
+import { SplashComponent } from './pages/log/splash/splash.component';
+
+//atipico
+import { HomeatipComponent } from './pages/atipico/homeatip/homeatip.component';
+import { MoodbegginAtipComponent } from './pages/atipico/mood/moodbeggin-atip/moodbeggin-atip.component';
+import { MoodquestionAtipComponent } from './pages/atipico/mood/moodquestion-atip/moodquestion-atip.component';
+import { MoodformsAtipComponent } from './pages/atipico/mood/moodforms-atip/moodforms-atip.component';
+import { TasksAtipComponent } from './pages/atipico/order/tasks-atip/tasks-atip.component';
+import { AddcalendarAtipComponent } from './pages/atipico/order/addcalendar-atip/addcalendar-atip.component';
+import { PerfilAtipComponent } from './pages/atipico/custom/perfil-atip/perfil-atip.component';
+import { PerfilsettingsAtipComponent } from './pages/atipico/custom/perfilsettings-atip/perfilsettings-atip.component';
+import { AddmedicationAtipComponent } from './pages/atipico/custom/addmedication-atip/addmedication-atip.component';
+import { AddwishAtipComponent } from './pages/atipico/custom/addwish-atip/addwish-atip.component';
+import { MedicationAtipComponent } from './pages/atipico/custom/id/medication-atip/medication-atip.component';
+import { WishAtipComponent } from './pages/atipico/custom/id/wish-atip/wish-atip.component';
 
 const routes: Routes = [
   //tipico
@@ -34,6 +61,33 @@ const routes: Routes = [
 
   //log
   { path: 'register', component: RegisterComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'userchoice', component: UserchoiceComponent },
+  { path: 'acess', component: AcessibilityComponent },
+  { path: 'cust.user', component: CustomuserComponent },
+  { path: 'cust.atip', component: CustomuseratipComponent },
+  { path: 'cust.prof', component: CustomuserprofComponent },
+  { path: 'famcreate', component: FamcreateComponent },
+  { path: 'famenter', component: FamenterComponent },
+  { path: 'splash', component: SplashComponent },
+
+  //atipico
+  { path: 'atip', component: HomeatipComponent },
+
+  { path: 'mood-atip', component: MoodbegginAtipComponent },
+  { path: 'moodquest-atip', component: MoodquestionAtipComponent },
+  { path: 'moodforms-atip', component: MoodformsAtipComponent },
+
+  { path: 'tasks-atip', component: TasksAtipComponent },
+  { path: 'addcalendar-atip', component: AddcalendarAtipComponent },
+
+  { path: 'perfil-atip', component: PerfilAtipComponent },
+  { path: 'perfilsettings-atip', component: PerfilsettingsAtipComponent },
+  { path: 'addmed-atip', component: AddmedicationAtipComponent },
+  { path: 'addwish-atip', component: AddwishAtipComponent },
+  { path: 'medication-atip', component: MedicationAtipComponent },
+  { path: 'wish-atip', component: WishAtipComponent },
+
 ];
 
 @NgModule({

@@ -1,0 +1,166 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Offside', sans-serif;
+}
+
+body{
+
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+  margin-bottom: -65px;
+  min-height: 600px;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.top{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1{
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+h2{
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+
+.box{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 930px;
+}
+
+
+.input-button{
+  display: flex;
+  justify-content: center;
+  }
+
+.input-button{
+  width: 191px;
+  height: 29px;
+  background: #D6C8E1;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  margin-top: 15px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.input-botao button{
+  width: 271px;
+  height: 48px;
+  background-color: #D6C8E1;
+  border-radius: 60px;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  position: relative;
+  width: 1.125rem;
+  height: 1.125rem;
+  background-color: #fff;
+  border: 0.125rem solid #ccc;
+  border-radius: 0.25rem;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.75rem;
+  height: 0.75rem;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: translate(-50%, -50%) scale(0);
+  transform-origin: center;
+  transition: 0.125s transform ease-in-out;
+  box-shadow: inset 1rem 1rem #fff;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #704D97;
+  border-color: #704D97;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+p{
+  font-size: 15px;
+}
+
+.form{
+  padding: 35px;
+}
+
+.form .input-botao{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.divisor{
+  margin-bottom: 20px;
+}
+
+.form .input-group{
+  margin-bottom: 20px;
+  border-bottom: 3px solid #704D97;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 3px;
+  cursor: text;
+}
+
+.form .input-group input{
+  border: none;
+ background-color: transparent;
+}
+
+.form .input-group input:focus{
+outline: none;
+}
+
+
+
+
+@media (max-width:930px) {
+
+  .box{
+      width: 700px;
+  }
+  .form-box{
+      width: 100%;
+      border-radius: 20px;
+  }
+}
+@media (max-width:500px) {
+  .w50{
+      width: 100%;
+      padding: 0;
+  }
+}
