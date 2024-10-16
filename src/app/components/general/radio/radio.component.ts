@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './radio.component.css'
 })
 export class RadioComponent {
+  clicado: boolean = false;
 
+  mudarCor(){
+    this.clicado = !this.clicado;
+  }
 }

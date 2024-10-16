@@ -1,1 +1,39 @@
-<p>perfilsettings works!</p>
+<header>
+  <mat-icon routerLink="/perfil">arrow_back_ios</mat-icon>
+  <h1>Configurações - Perfil</h1>
+</header>
+<main>
+  <section>
+    <div>
+      <h1>Editar nome</h1>
+      <img src="left.png" alt="">
+    </div>
+    <div>
+      <h1>Editar foto</h1>
+      <img src="left.png" alt="">
+    </div>
+    <div>
+      <h1>Fonte</h1>
+      <img src="left.png" alt="">
+    </div>
+    <div>
+      <h1>Tema</h1>
+      <img src="left.png" alt="">
+    </div>
+    <div>
+      <h1>Leitura por voz</h1>
+      <app-radio></app-radio>
+    </div>
+    <div>
+      <h1>Linguagem CAA</h1>
+      <app-radio></app-radio>
+    </div>
+  </section>
+  <section class="perigo">
+    <p>*Zona de perigo</p>
+    <div>
+      <button>Sair da família</button>
+      <button routerLink="/register">Logout</button>
+    </div>
+  </section>
+</main>

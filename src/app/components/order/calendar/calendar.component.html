@@ -1,1 +1,35 @@
-<p>calendar works!</p>
+<div class="calendar-header">
+  <div>
+    <select [(ngModel)]="currentMonth" (change)="generateCalendar(currentYear, currentMonth)">
+      <option *ngFor="let month of monthNames; let i = index" [value]="i">
+        {{ month }}
+      </option>
+    </select>
+    <select [(ngModel)]="currentYear" (change)="generateCalendar(currentYear, currentMonth)">
+      <option *ngFor="let year of generateYearsRange()" [value]="year">
+        {{ year }}
+      </option>
+    </select>
+  </div>
+  <div>
+    <mat-icon (click)="prevMonth()">arrow_back_ios</mat-icon>
+    <mat-icon (click)="nextMonth()">arrow_forward_ios</mat-icon>
+  </div>
+</div>
+
+<div class="calendar">
+  <div class="day-grid">
+    <div class="day" *ngFor="let day of daysOfWeek">{{ day }}</div>
+  </div>
+  <div class="calendar-grid">
+    <div
+      class="date"
+      *ngFor="let day of calendarDays; let i = index"
+      [ngClass]="{
+        'current-day': isCurrentDay(day),
+        'different-month': isDifferentMonth(i)
+      }">
+      {{ day }}
+    </div>
+  </div>
+</div>

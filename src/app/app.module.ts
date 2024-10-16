@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
+
+//components
 import { AppComponent } from './app.component';
 import { HometipComponent } from './pages/tipico/hometip/hometip.component';
 import { MoodbegginComponent } from './pages/tipico/mood/moodbeggin/moodbeggin.component';
@@ -41,7 +42,6 @@ import { AddmedicationAtipComponent } from './pages/atipico/custom/addmedication
 import { MedicationAtipComponent } from './pages/atipico/custom/id/medication-atip/medication-atip.component';
 import { WishAtipComponent } from './pages/atipico/custom/id/wish-atip/wish-atip.component';
 import { NavbarComponent } from './components/general/navbar/navbar.component';
-import { HeaderComponent } from './components/general/header/header.component';
 import { BannerComponent } from './components/home/banner/banner.component';
 import { RadioComponent } from './components/general/radio/radio.component';
 import { AddmoodComponent } from './components/mood/addmood/addmood.component';
@@ -56,6 +56,19 @@ import { RemedyComponent } from './components/custom/remedy/remedy.component';
 import { RemedylistComponent } from './components/custom/remedylist/remedylist.component';
 import { WishlistComponent } from './components/custom/wishlist/wishlist.component';
 import { CrisisbuttomComponent } from './components/home/crisisbuttom/crisisbuttom.component';
+
+//imports
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MatIconModule } from '@angular/material/icon';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatCardModule } from '@angular/material/card';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule, provideHttpClient } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+
 
 @NgModule({
   declarations: [
@@ -98,7 +111,6 @@ import { CrisisbuttomComponent } from './components/home/crisisbuttom/crisisbutt
     MedicationAtipComponent,
     WishAtipComponent,
     NavbarComponent,
-    HeaderComponent,
     BannerComponent,
     RadioComponent,
     AddmoodComponent,
@@ -116,9 +128,20 @@ import { CrisisbuttomComponent } from './components/home/crisisbuttom/crisisbutt
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatIconModule,
+    MatCheckboxModule,
+    BrowserAnimationsModule,
+    MatNativeDateModule,
+    MatDatepickerModule,
+    MatCardModule,
+    FormsModule,
+    HttpClientModule,
+    CommonModule
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

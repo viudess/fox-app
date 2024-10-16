@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrl: './daybuttom.component.css'
 })
 export class DaybuttomComponent {
+  clicado: number | null = null;
 
+  mudarCor(index: number) {
+    if (this.clicado === index) {
+      this.clicado = null;
+    } else {
+      this.clicado = index;
+    }
+  }
 }

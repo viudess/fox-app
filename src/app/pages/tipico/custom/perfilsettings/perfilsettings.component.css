@@ -1,0 +1,51 @@
+header{
+  position: relative;
+}
+mat-icon{
+  position: absolute;
+  left: 20px;
+}
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;
+}
+section{
+  width: 80%;
+}
+section div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+img{
+  width: 30px;
+  height: 30px;
+}
+.perigo{
+  margin-top: 150px;
+  width: 80%;
+}
+.perigo div{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.perigo button{
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  color: white;
+  font-size: large;
+  background-color: #B02828;
+  margin-bottom: 10px;
+}
+p{
+  color: #B02828;
+  font-size: smaller;
+  margin-bottom: 10px;
+}

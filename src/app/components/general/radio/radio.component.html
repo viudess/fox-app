@@ -1,1 +1,4 @@
-<p>radio works!</p>
+<div class="radio" (click)="mudarCor()"
+  [ngStyle]="{'background-color': clicado ? '#704D97' : ''}">
+  <img src="ok-image.png" alt="" [hidden]="!clicado">
+</div>

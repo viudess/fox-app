@@ -1,1 +1,56 @@
-<p>perfil works!</p>
+<app-navbar></app-navbar>
+<header>
+  <h1>Perfil</h1>
+  <button routerLink="/perfilsettings">
+    <img src="config.png" alt="">
+  </button>
+</header>
+<section>
+  <div class="align-neurotipo">
+    <div class="neurotipo">
+      <h1>{{nome}}</h1>
+      <p>{{neurotipo}} - Neurotipo</p>
+    </div>
+  </div>
+  <div class="imagePerfil">
+    <img src={{imagem}} alt="">
+  </div>
+</section>
+<main>
+  <div class="familia">
+    <h1>Família</h1>
+    <div>
+      <img src="perfil.png" alt="">
+      <img src="perfil.png" alt="">
+      <img src="perfil.png" alt="">
+    </div>
+  </div>
+
+  <div class="container-med">
+    <div class="medicamentos">
+      <h1>Medicamentos</h1>
+      <div>
+        <button routerLink="/addmed"><mat-icon>add_circle</mat-icon></button>
+      </div>
+    </div>
+    <div class="container-rem">
+      <div class="rem">
+        <app-remedylist></app-remedylist>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-med">
+    <div class="medicamentos">
+      <h1>Lista de desejos</h1>
+      <div>
+        <button routerLink="/addwish"><mat-icon>add_circle</mat-icon></button>
+      </div>
+    </div>
+    <div class="container-rem">
+      <div *ngFor="let wishes of wishlist">
+        <app-wishlist [wish]="wishes.wish"></app-wishlist>
+      </div>
+    </div>
+  </div>
+</main>

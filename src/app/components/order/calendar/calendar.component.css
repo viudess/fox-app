@@ -1,0 +1,80 @@
+.calendar {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #D6C8E1;
+  color: black;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  font-size: 1.1rem;
+}
+
+.calendar-header .h1{
+  margin-bottom: 8px;
+}
+
+.calendar-header select {
+  padding: 5px;
+  font-size: 1rem;
+  margin-right: 10px;
+  border-radius: 5px;
+  background-color: #F0F0F0;
+}
+.calendar-header option{
+  background-color: #D6C8E1;
+}
+.calendar-header option :hover{
+  background-color: #876E9B;
+}
+mat-icon{
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 7px;
+}
+
+.day {
+  font-weight: bold;
+  font-size: small;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.day-grid{
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 7px;
+  border-bottom: 1px solid black;
+  margin-bottom: 5px;
+}
+
+.date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 35px;
+  text-align: center;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.different-month {
+  color: #9C9C9C;
+}
+
+.current-day {
+  background-color: #876E9B;
+  color: white;
+}

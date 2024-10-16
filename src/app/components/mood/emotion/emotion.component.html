@@ -1,1 +1,6 @@
-<p>emotion works!</p>
+<button>
+  <div class="emotion" (click)="mudarCor()" [ngStyle]="{'border-color': clicado ? '#704D97' : 'black', 'background-color': clicado ? '#D6C8E1' : 'white'}">
+    <img src={{image}} alt="">
+  </div>
+  <p>{{title}}</p>
+</button>

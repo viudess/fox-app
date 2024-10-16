@@ -1,1 +1,77 @@
-<p>moodforms works!</p>
+<main>
+  <header>
+    <h1>Questionário de humor</h1>
+  </header>
+  <div class="sentimentos">
+    <h1>Como está seu dia?</h1>
+    <app-daybuttom></app-daybuttom>
+    <h1>Como você está se sentindo?</h1>
+    <section>
+      <div class="gridblock-normal">
+        <div *ngFor="let emotion of emotions">
+          <app-emotion [title]="emotion.title" [image]="emotion.image"></app-emotion>
+        </div>
+      </div>
+    </section>
+    <form>
+      <h1>Escreva sobre o que sente:</h1>
+      <div class="gridinput">
+        <input type="text" placeholder="Digite aqui">
+      </div>
+      <h1>Está sobrecarregado?</h1>
+      <form class="check">
+        <div class="gridcheck" (click)="mudarCor(0, 0)">
+          <div class="radio"
+            [ngStyle]="{'background-color': sobrecarregado === 0 ? '#704D97' : '', 'border': sobrecarregado === 0 ? '1px solid #704D97' : ''}">
+            <img src="ok-image.png" alt="" [hidden]="sobrecarregado !== 0">
+          </div>
+          <h2>Sim</h2>
+        </div>
+        <div class="gridcheck" (click)="mudarCor(0, 1)">
+          <div class="radio"
+            [ngStyle]="{'background-color': sobrecarregado === 1 ? '#704D97' : '', 'border': sobrecarregado === 1 ? '1px solid #704D97' : ''}">
+            <img src="ok-image.png" alt="" [hidden]="sobrecarregado !== 1">
+          </div>
+          <h2>Não</h2>
+        </div>
+      </form>
+      <h1>Você está verbal-vocalizado?</h1>
+      <form class="check">
+        <div class="gridcheck" (click)="mudarCor(1, 0)">
+          <div class="radio"
+            [ngStyle]="{'background-color': verbal === 0 ? '#704D97' : '', 'border': verbal === 0 ? '1px solid #704D97' : ''}">
+            <img src="ok-image.png" alt="" [hidden]="verbal !== 0">
+          </div>
+          <h2>Sim</h2>
+        </div>
+        <div class="gridcheck" (click)="mudarCor(1, 1)">
+          <div class="radio"
+            [ngStyle]="{'background-color': verbal === 1 ? '#704D97' : '', 'border': verbal === 1 ? '1px solid #704D97' : ''}">
+            <img src="ok-image.png" alt="" [hidden]="verbal !== 1">
+          </div>
+          <h2>Não</h2>
+        </div>
+      </form>
+      <h1>Prefere evitar contato físico?</h1>
+      <form class="check">
+        <div class="gridcheck" (click)="mudarCor(2, 0)">
+          <div class="radio"
+            [ngStyle]="{'background-color': contatoFisico === 0 ? '#704D97' : '', 'border': contatoFisico === 0 ? '1px solid #704D97' : ''}">
+            <img src="ok-image.png" alt="" [hidden]="contatoFisico !== 0">
+          </div>
+          <h2>Sim</h2>
+        </div>
+        <div class="gridcheck" (click)="mudarCor(2, 1)">
+          <div class="radio"
+            [ngStyle]="{'background-color': contatoFisico === 1 ? '#704D97' : '', 'border': contatoFisico === 1 ? '1px solid #704D97' : ''}">
+            <img src="ok-image.png" alt="" [hidden]="contatoFisico !== 1">
+          </div>
+          <h2>Não</h2>
+        </div>
+      </form>
+    </form>
+    <div class="finalizar">
+      <button routerLink="/mood">Finalizar questionário</button>
+    </div>
+  </div>
+</main>

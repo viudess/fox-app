@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-emotion',
@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrl: './emotion.component.css'
 })
 export class EmotionComponent {
+  @Input() title!: string;
+  @Input() image!: string;
+  clicado = false;
 
+  mudarCor(){
+    this.clicado = !this.clicado;
+  }
 }

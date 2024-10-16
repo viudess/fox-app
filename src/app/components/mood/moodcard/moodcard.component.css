@@ -1,0 +1,27 @@
+.mood{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+button{
+  background-color: #D6C8E1;
+  width: 90%;
+  padding: 10px;
+  padding-inline: 15px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+button div{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+button h1{
+  font-weight: bold;
+}
+button p{
+  color: #636363;
+}

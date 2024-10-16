@@ -1,1 +1,21 @@
-<p>daybuttom works!</p>
+<div class="gridblock45">
+  <div>
+    <button class="block45" (click)="mudarCor(0)" [ngStyle]="{'background-color': clicado === 0 ? '#704D97' : '#D6C8E1', 'color': clicado === 0 ? 'white' : 'black'}">
+      <h1>Ótimo</h1>
+    </button>
+    <button class="block45" (click)="mudarCor(1)" [ngStyle]="{'background-color': clicado === 1 ? '#704D97' : '#D6C8E1', 'color': clicado === 1 ? 'white' : 'black'}">
+      <h1>Ruim</h1>
+    </button>
+  </div>
+  <button class="block45" (click)="mudarCor(2)" [ngStyle]="{'background-color': clicado === 2 ? '#704D97' : '#D6C8E1', 'color': clicado === 2 ? 'white' : 'black'}">
+    <h1>Normal</h1>
+  </button>
+  <div>
+    <button class="block45" (click)="mudarCor(3)" [ngStyle]="{'background-color': clicado === 3 ? '#704D97' : '#D6C8E1', 'color': clicado === 3 ? 'white' : 'black'}">
+      <h1>Bom</h1>
+    </button>
+    <button class="block45" (click)="mudarCor(4)" [ngStyle]="{'background-color': clicado === 4 ? '#704D97' : '#D6C8E1', 'color': clicado === 4 ? 'white' : 'black'}">
+      <h1>Péssimo</h1>
+    </button>
+  </div>
+</div>

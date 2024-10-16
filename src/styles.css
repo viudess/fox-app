@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  background-color: #F0F0F0;
+  font-family: offside;
+  margin-bottom: 65px;
+  margin: 0;
+}
+
+header{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #704D97;
+  color: white;
+  font-size: large;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+

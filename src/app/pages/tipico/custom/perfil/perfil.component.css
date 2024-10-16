@@ -1,0 +1,114 @@
+header{
+  position: relative;
+}
+header button{
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  right: 20px;
+}
+section{
+  width: 100%;
+  height: 100px;
+  background-color: #D6C8E1;
+  margin-top: -20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+section img{
+  width: 75px;
+  height: 75px;
+  border-radius: 100%;
+}
+.imagePerfil{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.neurotipo{
+  height: 50px;
+  width: 100%;
+  background-color: #F0F0F0;
+  border-top-right-radius: 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.align-neurotipo{
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+}
+.neurotipo h1,.neurotipo p{
+  margin-left: 5%;
+}
+.neurotipo p{
+  font-size: small;
+  color: gray;
+}
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.familia, .medicamentos{
+  background-color: #876E9B;
+  width: 90%;
+  height: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+.medicamentos{
+  border-end-end-radius: 0px;
+  border-end-start-radius: 0px;
+}
+.familia, .medicamentos h1{
+  padding-left: 5%;
+}
+.familia img{
+  border-radius: 100%;
+  width: 25px;
+  height: 25px;
+  margin-left: 5px;
+}
+.familia div{
+  display: flex;
+  flex-direction: row;
+}
+.familia, .medicamentos div{
+  padding-right: 5%;
+  display: flex;
+  flex-direction: row;
+}
+.medicamentos img{
+  width: 25px;
+  height: 25px;
+  margin-left: 15px;
+}
+.container-med{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.container-rem{
+  background-color: #D6C8E1;
+  width: 90%;
+  border-end-end-radius: 10px;
+  border-end-start-radius: 10px;
+}
+.rem{
+  padding-left: 20px;
+}
+.medicamentos button{
+  height: 24px;
+}

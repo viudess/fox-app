@@ -1,0 +1,16 @@
+.emotion{
+  width: 85px;
+  height: 85px;
+  border-radius: 10px;
+  border: 2px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+p{
+  font-size: small;
+  margin-top: 5px;
+  width: 85px;
+  display: flex;
+  justify-content: center;
+}
