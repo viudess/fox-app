@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-event',
@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './event.component.css'
 })
 export class EventComponent {
-
+  @Input() nomeEvento!: string;
+  @Input() horario!: string;
+  @Input() data!: string;
 }

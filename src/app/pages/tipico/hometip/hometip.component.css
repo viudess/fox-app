@@ -1,0 +1,48 @@
+main{
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+}
+.botoes button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border:4px solid #876E9B;
+  border-radius: 25px;
+  width: 110px;
+  height: 110px;
+  margin-inline: 12px;
+  margin-bottom: 20px;
+}
+.botoes div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: 90px;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.med, .event{
+  background-color: #D6C8E1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 30px;
+  border-radius: 10px;
+  font-size: large;
+  margin-bottom: 5px;
+}
+.event{
+  background-color: #876E9B;
+  color: white;
+  margin-top: 20px;
+}
+.med-list{
+  width: 90%;
+}

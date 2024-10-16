@@ -1,0 +1,115 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Offside', sans-serif;
+}
+
+body{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 70px;
+  min-height: 600px;
+}
+
+.cadastro{
+display: flex;
+align-items: center;
+flex-direction: column;
+}
+
+
+.box{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 930px;
+}
+
+.img-box{
+  width: 140px;
+}
+.form-box{
+align-items: center;
+
+  backdrop-filter: blur(40px);
+  padding: 30px 40px;
+  width: 50%;
+  border-radius: 0 20px 20px 0;
+
+}
+.form-box h2{
+align-items: center;
+  font-size: 30px;
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+.form-box p{
+  color: #555555;
+  font-size: 13px;
+}
+.form-box p a{
+  color: #704D97;
+  text-decoration: none;
+}
+.form-box form{
+  margin: 25px 0;
+}
+form .input-group{
+  margin-bottom: 20px;
+  border-bottom: 3px solid #704D97;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 3px;
+  cursor: text;
+}
+
+
+form .input-group input{
+  border: none;
+ background-color: transparent;
+}
+
+form .input-group input:focus{
+outline: none;
+}
+
+form .input-button{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form .input-button button{
+  width: 271px;
+  height: 48px;
+  background: #D6C8E1;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  margin-top: 15px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  font-size: 20px;
+
+}
+
+@media (max-width:930px) {
+
+  .box{
+      width: 700px;
+  }
+  .form-box{
+      width: 100%;
+      border-radius: 20px;
+  }
+}
+@media (max-width:500px) {
+  .w50{
+      width: 100%;
+      padding: 0;
+  }
+}

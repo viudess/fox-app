@@ -10,6 +10,9 @@ import { AddcalendarComponent } from './pages/tipico/order/addcalendar/addcalend
 import { PerfilsettingsComponent } from './pages/tipico/custom/perfilsettings/perfilsettings.component';
 import { AddmedicationComponent } from './pages/tipico/custom/addmedication/addmedication.component';
 import { AddwishComponent } from './pages/tipico/custom/addwish/addwish.component';
+import { MedicationComponent } from './pages/tipico/custom/id/medication/medication.component';
+import { WishComponent } from './pages/tipico/custom/id/wish/wish.component';
+import { RegisterComponent } from './pages/log/register/register.component';
 
 const routes: Routes = [
   //tipico
@@ -26,6 +29,11 @@ const routes: Routes = [
   { path: 'perfilsettings', component: PerfilsettingsComponent },
   { path: 'addmed', component: AddmedicationComponent },
   { path: 'addwish', component: AddwishComponent },
+  { path: 'medication', component: MedicationComponent },
+  { path: 'wish', component: WishComponent },
+
+  //log
+  { path: 'register', component: RegisterComponent },
 ];
 
 @NgModule({

@@ -1,1 +1,7 @@
-<p>eventlist works!</p>
+<app-event
+*ngFor="let evento of eventos"
+[nomeEvento]="evento.nomeEvento"
+[data]="evento.data"
+[horario]="evento.horario"
+>
+</app-event>

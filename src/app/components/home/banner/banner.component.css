@@ -19,7 +19,6 @@ h1{
   color: #F0F0F0;
   font-weight: bold;
   width: 50%;
-  line-height: 1.7rem;
 }
 a{
   background-color: #F0F0F0;
@@ -32,9 +31,7 @@ a{
   display: flex;
   justify-content: center;
   align-items: center;
-  text-decoration: none;
 }
-
 img{
   width: 125px;
   padding-top: 30px;

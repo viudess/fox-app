@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './eventlist.component.css'
 })
 export class EventlistComponent {
-
+  eventos=[
+    {nomeEvento: 'Evento', data: '31/10', horario:'20:00'},
+    {nomeEvento: 'Evento', data: '31/10', horario:'20:00'},
+  ]
 }
