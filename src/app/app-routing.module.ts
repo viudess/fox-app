@@ -38,8 +38,6 @@ import { PerfilAtipComponent } from './pages/atipico/custom/perfil-atip/perfil-a
 import { PerfilsettingsAtipComponent } from './pages/atipico/custom/perfilsettings-atip/perfilsettings-atip.component';
 import { AddmedicationAtipComponent } from './pages/atipico/custom/addmedication-atip/addmedication-atip.component';
 import { AddwishAtipComponent } from './pages/atipico/custom/addwish-atip/addwish-atip.component';
-import { MedicationAtipComponent } from './pages/atipico/custom/id/medication-atip/medication-atip.component';
-import { WishAtipComponent } from './pages/atipico/custom/id/wish-atip/wish-atip.component';
 
 const routes: Routes = [
   //tipico
@@ -85,9 +83,6 @@ const routes: Routes = [
   { path: 'perfilsettings-atip', component: PerfilsettingsAtipComponent },
   { path: 'addmed-atip', component: AddmedicationAtipComponent },
   { path: 'addwish-atip', component: AddwishAtipComponent },
-  { path: 'medication-atip', component: MedicationAtipComponent },
-  { path: 'wish-atip', component: WishAtipComponent },
-
 ];
 
 @NgModule({

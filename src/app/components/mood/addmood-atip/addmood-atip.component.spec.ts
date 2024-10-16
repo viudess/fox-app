@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MedicationAtipComponent } from './medication-atip.component';
+import { AddmoodAtipComponent } from './addmood-atip.component';
 
-describe('MedicationAtipComponent', () => {
-  let component: MedicationAtipComponent;
-  let fixture: ComponentFixture<MedicationAtipComponent>;
+describe('AddmoodAtipComponent', () => {
+  let component: AddmoodAtipComponent;
+  let fixture: ComponentFixture<AddmoodAtipComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [MedicationAtipComponent]
+      declarations: [AddmoodAtipComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(MedicationAtipComponent);
+    fixture = TestBed.createComponent(AddmoodAtipComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

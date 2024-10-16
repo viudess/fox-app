@@ -39,8 +39,6 @@ import { PerfilAtipComponent } from './pages/atipico/custom/perfil-atip/perfil-a
 import { PerfilsettingsAtipComponent } from './pages/atipico/custom/perfilsettings-atip/perfilsettings-atip.component';
 import { AddwishAtipComponent } from './pages/atipico/custom/addwish-atip/addwish-atip.component';
 import { AddmedicationAtipComponent } from './pages/atipico/custom/addmedication-atip/addmedication-atip.component';
-import { MedicationAtipComponent } from './pages/atipico/custom/id/medication-atip/medication-atip.component';
-import { WishAtipComponent } from './pages/atipico/custom/id/wish-atip/wish-atip.component';
 import { NavbarComponent } from './components/general/navbar/navbar.component';
 import { BannerComponent } from './components/home/banner/banner.component';
 import { RadioComponent } from './components/general/radio/radio.component';
@@ -68,6 +66,8 @@ import { MatCardModule } from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { NavbarAtipComponent } from './components/general/navbar-atip/navbar-atip.component';
+import { AddmoodAtipComponent } from './components/mood/addmood-atip/addmood-atip.component';
 
 
 @NgModule({
@@ -108,8 +108,6 @@ import { CommonModule } from '@angular/common';
     PerfilsettingsAtipComponent,
     AddmedicationAtipComponent,
     AddwishAtipComponent,
-    MedicationAtipComponent,
-    WishAtipComponent,
     NavbarComponent,
     BannerComponent,
     RadioComponent,
@@ -125,6 +123,8 @@ import { CommonModule } from '@angular/common';
     RemedylistComponent,
     WishlistComponent,
     CrisisbuttomComponent,
+    NavbarAtipComponent,
+    AddmoodAtipComponent,
   ],
   imports: [
     BrowserModule,

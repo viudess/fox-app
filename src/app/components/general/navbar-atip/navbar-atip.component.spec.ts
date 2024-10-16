@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WishAtipComponent } from './wish-atip.component';
+import { NavbarAtipComponent } from './navbar-atip.component';
 
-describe('WishAtipComponent', () => {
-  let component: WishAtipComponent;
-  let fixture: ComponentFixture<WishAtipComponent>;
+describe('NavbarAtipComponent', () => {
+  let component: NavbarAtipComponent;
+  let fixture: ComponentFixture<NavbarAtipComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [WishAtipComponent]
+      declarations: [NavbarAtipComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(WishAtipComponent);
+    fixture = TestBed.createComponent(NavbarAtipComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
