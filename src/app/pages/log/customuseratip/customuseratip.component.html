@@ -3,21 +3,31 @@
     <div class="form">
       <div class="divisor">
       <p>Você é:</p>
-        <div class="checkbox">
-          <div>
-            <app-radio></app-radio>
-            <h2>Verbal vocalizado</h2>
+      <form class="checkbox">
+        <div class="gridcheck" (click)="mudarCor(0, 0)">
+          <div class="radio"
+            [ngStyle]="{'background-color': sobrecarregado === 0 ? '#704D97' : '', 'border': sobrecarregado === 0 ? '1px solid #704D97' : ''}">
+            <img src="ok-image.png" alt="" [hidden]="sobrecarregado !== 0">
           </div>
-          <div>
-            <app-radio></app-radio>
-            <h2>Semi-verbal vocalizado</h2>
-          </div>
-          <div>
-            <app-radio></app-radio>
-            <h2>Não-verbal vocalizado</h2>
-          </div>
+          <h2>Verbal vocalizado</h2>
         </div>
+        <div class="gridcheck" (click)="mudarCor(0, 1)">
+          <div class="radio"
+            [ngStyle]="{'background-color': sobrecarregado === 1 ? '#704D97' : '', 'border': sobrecarregado === 1 ? '1px solid #704D97' : ''}">
+            <img src="ok-image.png" alt="" [hidden]="sobrecarregado !== 1">
+          </div>
+          <h2>Semi-verbal vocalizado</h2>
+        </div>
+        <div class="gridcheck" (click)="mudarCor(0, 2)">
+          <div class="radio"
+            [ngStyle]="{'background-color': sobrecarregado === 2 ? '#704D97' : '', 'border': sobrecarregado === 2 ? '1px solid #704D97' : ''}">
+            <img src="ok-image.png" alt="" [hidden]="sobrecarregado !== 2">
+          </div>
+          <h2>Não-verbal vocalizado</h2>
+        </div>
+      </form>
       </div>
+
       <div class="divisor">
       <p>Neurotipo(s)</p>
         <div class="input-group">

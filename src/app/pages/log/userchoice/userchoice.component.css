@@ -63,8 +63,11 @@ form .input-button button{
   color: rgb(0, 0, 0);
   cursor: pointer;
   font-size: 20px;
+}
 
 
+.checkbox{
+  margin-bottom: 20px;
 }
 
 @media (max-width:930px) {
