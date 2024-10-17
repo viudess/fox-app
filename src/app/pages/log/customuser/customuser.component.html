@@ -3,26 +3,48 @@
     <div class="top">
      <h1>Vamos começar!</h1>
      <h2>Primeiro, personalize seu perfil.</h2>
-     <img src="icon-camera.png" alt="">
+     <button>
+      <img src="icon-camera.png" alt="">
+     </button>
        <div class="input-button">
         <button>Escolher foto de perfil</button>
        </div>
     </div>
     <div class="form">
-      <div class="divisor">
       <p>Você é:</p>
-        <div class="checkbox">
-          <ul><input type="checkbox" /> Neurotípico</ul>
-          <ul><input type="checkbox" /> Neurodivergente</ul>
+      <form class="checkbox">
+        <div class="gridcheck" (click)="mudarCor(0, 0)">
+          <div class="radio"
+            [ngStyle]="{'background-color': sobrecarregado === 0 ? '#704D97' : '', 'border': sobrecarregado === 0 ? '1px solid #704D97' : ''}">
+            <img src="ok-image.png" alt="" [hidden]="sobrecarregado !== 0">
+          </div>
+          <h2>Neurotípico</h2>
         </div>
-      </div>
-      <div class="divisor">
+        <div class="gridcheck" (click)="mudarCor(0, 1)">
+          <div class="radio"
+            [ngStyle]="{'background-color': sobrecarregado === 1 ? '#704D97' : '', 'border': sobrecarregado === 1 ? '1px solid #704D97' : ''}">
+            <img src="ok-image.png" alt="" [hidden]="sobrecarregado !== 1">
+          </div>
+          <h2>Neurodivergente</h2>
+        </div>
+      </form>
       <p>É responsável por alguém da família?</p>
-        <div class="checkbox">
-        <ul><input type="checkbox" /> Sim</ul>
-        <ul><input type="checkbox" /> Não</ul>
+      <form class="checkbox">
+        <div class="gridcheck" (click)="mudarCor(1, 0)">
+          <div class="radio"
+            [ngStyle]="{'background-color': verbal === 0 ? '#704D97' : '', 'border': verbal === 0 ? '1px solid #704D97' : ''}">
+            <img src="ok-image.png" alt="" [hidden]="verbal !== 0">
+          </div>
+          <h2>Sim</h2>
         </div>
-      </div>
+        <div class="gridcheck" (click)="mudarCor(1, 1)">
+          <div class="radio"
+            [ngStyle]="{'background-color': verbal === 1 ? '#704D97' : '', 'border': verbal === 1 ? '1px solid #704D97' : ''}">
+            <img src="ok-image.png" alt="" [hidden]="verbal !== 1">
+          </div>
+          <h2>Não</h2>
+        </div>
+      </form>
       <div class="divisor">
       <p>Insira sua idade:</p>
         <div class="input-group">

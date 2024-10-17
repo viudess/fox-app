@@ -35,13 +35,12 @@ import { MoodformsAtipComponent } from './pages/atipico/mood/moodforms-atip/mood
 import { TasksAtipComponent } from './pages/atipico/order/tasks-atip/tasks-atip.component';
 import { AddcalendarAtipComponent } from './pages/atipico/order/addcalendar-atip/addcalendar-atip.component';
 import { PerfilAtipComponent } from './pages/atipico/custom/perfil-atip/perfil-atip.component';
-import { PerfilsettingsAtipComponent } from './pages/atipico/custom/perfilsettings-atip/perfilsettings-atip.component';
-import { AddmedicationAtipComponent } from './pages/atipico/custom/addmedication-atip/addmedication-atip.component';
-import { AddwishAtipComponent } from './pages/atipico/custom/addwish-atip/addwish-atip.component';
 
 const routes: Routes = [
   //tipico
-  { path: '', component: HometipComponent },
+  { path: '', redirectTo: '/splash', pathMatch: 'full' },
+
+  { path: 'home', component: HometipComponent },
 
   { path: 'mood', component: MoodbegginComponent },
   { path: 'moodquest', component: MoodquestionComponent },
@@ -80,9 +79,6 @@ const routes: Routes = [
   { path: 'addcalendar-atip', component: AddcalendarAtipComponent },
 
   { path: 'perfil-atip', component: PerfilAtipComponent },
-  { path: 'perfilsettings-atip', component: PerfilsettingsAtipComponent },
-  { path: 'addmed-atip', component: AddmedicationAtipComponent },
-  { path: 'addwish-atip', component: AddwishAtipComponent },
 ];
 
 @NgModule({

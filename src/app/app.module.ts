@@ -36,9 +36,6 @@ import { TasksAtipComponent } from './pages/atipico/order/tasks-atip/tasks-atip.
 import { AddtasksAtipComponent } from './pages/atipico/order/addtasks-atip/addtasks-atip.component';
 import { AddcalendarAtipComponent } from './pages/atipico/order/addcalendar-atip/addcalendar-atip.component';
 import { PerfilAtipComponent } from './pages/atipico/custom/perfil-atip/perfil-atip.component';
-import { PerfilsettingsAtipComponent } from './pages/atipico/custom/perfilsettings-atip/perfilsettings-atip.component';
-import { AddwishAtipComponent } from './pages/atipico/custom/addwish-atip/addwish-atip.component';
-import { AddmedicationAtipComponent } from './pages/atipico/custom/addmedication-atip/addmedication-atip.component';
 import { NavbarComponent } from './components/general/navbar/navbar.component';
 import { BannerComponent } from './components/home/banner/banner.component';
 import { RadioComponent } from './components/general/radio/radio.component';
@@ -105,9 +102,6 @@ import { AddmoodAtipComponent } from './components/mood/addmood-atip/addmood-ati
     AddtasksAtipComponent,
     AddcalendarAtipComponent,
     PerfilAtipComponent,
-    PerfilsettingsAtipComponent,
-    AddmedicationAtipComponent,
-    AddwishAtipComponent,
     NavbarComponent,
     BannerComponent,
     RadioComponent,

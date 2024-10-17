@@ -1,13 +1,4 @@
-
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: 'Offside', sans-serif;
-}
-
 body{
-
   align-items: center;
   justify-content: center;
   padding-top: 50px;
@@ -21,13 +12,6 @@ body{
   flex-direction: column;
 }
 
-.top{
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 h1{
   font-size: 20px;
   margin-bottom: 5px;
@@ -35,9 +19,28 @@ h1{
 
 h2{
   font-size: 15px;
-  margin-bottom: 15px;
+  margin-left: 5px;
 }
 
+
+p{
+  font-size: 15px;
+}
+
+.checkbox{
+  margin-bottom: 20px;
+}
+
+.top{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.top img{
+  margin-top: 20px;
+}
 
 .box{
   display: flex;
@@ -45,7 +48,6 @@ h2{
   flex-direction: column;
   width: 930px;
 }
-
 
 .input-button{
   display: flex;
@@ -74,45 +76,13 @@ h2{
   margin-top: 10px;
 }
 
-input[type="checkbox"] {
-  appearance: none;
-  position: relative;
-  width: 1.125rem;
-  height: 1.125rem;
-  background-color: #fff;
-  border: 0.125rem solid #ccc;
-  border-radius: 0.25rem;
-}
-
-input[type="checkbox"]::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0.75rem;
-  height: 0.75rem;
-  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
-  transform: translate(-50%, -50%) scale(0);
-  transform-origin: center;
-  transition: 0.125s transform ease-in-out;
-  box-shadow: inset 1rem 1rem #fff;
-}
-
-input[type="checkbox"]:checked {
-  background-color: #704D97;
-  border-color: #704D97;
-}
-
-input[type="checkbox"]:checked::before {
-  transform: translate(-50%, -50%) scale(1);
-}
-
-p{
-  font-size: 15px;
-}
-
 .form{
   padding: 35px;
+}
+
+.form p{
+  margin-bottom: 10px;
+  font-size: medium;
 }
 
 .form .input-botao{
@@ -137,7 +107,7 @@ p{
 }
 
 .form .input-group input{
-  border: none;
+ border: none;
  background-color: transparent;
 }
 
@@ -145,8 +115,24 @@ p{
 outline: none;
 }
 
-
-
+.gridcheck{
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.radio{
+  width: 20px;
+  height: 20px;
+  border: 3px solid #D6C8E1;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.radio img{
+  width: 80%;
+  height: 60%;
+}
 
 @media (max-width:930px) {
 
