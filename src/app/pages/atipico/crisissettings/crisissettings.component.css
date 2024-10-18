@@ -1,0 +1,7 @@
+header{
+  position: relative;
+}
+mat-icon{
+  position: absolute;
+  left: 20px;
+}

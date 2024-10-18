@@ -1,33 +1,41 @@
 <app-navbar-atip></app-navbar-atip>
 <app-banner></app-banner>
 <main>
-  <section class="botoes">
-    <button>
-      <div>
-        <img src="pasta.png" alt="">
-        <h2>C.A.A</h2>
-      </div>
-    </button>
+  <section class="direction">
+    <section class="botoes">
+      <button>
+        <div>
+          <img src="pasta.png" alt="">
+          <h2>C.A.A</h2>
+        </div>
+      </button>
 
-    <button>
-      <div>
-        <img src="pasta.png" alt="">
-        <h2>Histórias sociais</h2>
-      </div>
-    </button>
+      <button>
+        <div>
+          <img src="pasta.png" alt="">
+          <h2>Histórias sociais</h2>
+        </div>
+      </button>
+    </section>
+
+    <div class="crisis">
+      <app-crisisbuttom></app-crisisbuttom>
+    </div>
   </section>
 
   <section class="container">
-    <h2 class="med">Medicações</h2>
-    <div class="med-list">
-      <app-remedylist></app-remedylist>
+    <div class="list">
+      <h2 class="med">Medicações</h2>
+      <div class="med-list">
+        <app-remedylist></app-remedylist>
+      </div>
     </div>
 
-    <h2 class="event">Eventos da semana</h2>
-
-    <div class="med-list">
-      <app-eventlist></app-eventlist>
+    <div class="list">
+      <h2 class="event">Eventos da semana</h2>
+      <div class="med-list">
+        <app-eventlist></app-eventlist>
+      </div>
     </div>
-
   </section>
 </main>

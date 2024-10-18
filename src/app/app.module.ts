@@ -30,8 +30,6 @@ import { FamcreateComponent } from './pages/log/famcreate/famcreate.component';
 import { FamenterComponent } from './pages/log/famenter/famenter.component';
 import { CustomuserprofComponent } from './pages/log/customuserprof/customuserprof.component';
 import { MoodbegginAtipComponent } from './pages/atipico/mood/moodbeggin-atip/moodbeggin-atip.component';
-import { MoodformsAtipComponent } from './pages/atipico/mood/moodforms-atip/moodforms-atip.component';
-import { MoodquestionAtipComponent } from './pages/atipico/mood/moodquestion-atip/moodquestion-atip.component';
 import { TasksAtipComponent } from './pages/atipico/order/tasks-atip/tasks-atip.component';
 import { AddtasksAtipComponent } from './pages/atipico/order/addtasks-atip/addtasks-atip.component';
 import { AddcalendarAtipComponent } from './pages/atipico/order/addcalendar-atip/addcalendar-atip.component';
@@ -64,7 +62,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { NavbarAtipComponent } from './components/general/navbar-atip/navbar-atip.component';
-import { AddmoodAtipComponent } from './components/mood/addmood-atip/addmood-atip.component';
 
 
 @NgModule({
@@ -96,8 +93,6 @@ import { AddmoodAtipComponent } from './components/mood/addmood-atip/addmood-ati
     FamenterComponent,
     CustomuserprofComponent,
     MoodbegginAtipComponent,
-    MoodformsAtipComponent,
-    MoodquestionAtipComponent,
     TasksAtipComponent,
     AddtasksAtipComponent,
     AddcalendarAtipComponent,
@@ -118,7 +113,6 @@ import { AddmoodAtipComponent } from './components/mood/addmood-atip/addmood-ati
     WishlistComponent,
     CrisisbuttomComponent,
     NavbarAtipComponent,
-    AddmoodAtipComponent,
   ],
   imports: [
     BrowserModule,

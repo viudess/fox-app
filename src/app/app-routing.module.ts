@@ -30,11 +30,10 @@ import { SplashComponent } from './pages/log/splash/splash.component';
 //atipico
 import { HomeatipComponent } from './pages/atipico/homeatip/homeatip.component';
 import { MoodbegginAtipComponent } from './pages/atipico/mood/moodbeggin-atip/moodbeggin-atip.component';
-import { MoodquestionAtipComponent } from './pages/atipico/mood/moodquestion-atip/moodquestion-atip.component';
-import { MoodformsAtipComponent } from './pages/atipico/mood/moodforms-atip/moodforms-atip.component';
 import { TasksAtipComponent } from './pages/atipico/order/tasks-atip/tasks-atip.component';
 import { AddcalendarAtipComponent } from './pages/atipico/order/addcalendar-atip/addcalendar-atip.component';
 import { PerfilAtipComponent } from './pages/atipico/custom/perfil-atip/perfil-atip.component';
+import { CrisissettingsComponent } from './pages/atipico/crisissettings/crisissettings.component';
 
 const routes: Routes = [
   //tipico
@@ -70,10 +69,9 @@ const routes: Routes = [
 
   //atipico
   { path: 'atip', component: HomeatipComponent },
+  { path: 'crisis.stt', component: CrisissettingsComponent },
 
   { path: 'mood-atip', component: MoodbegginAtipComponent },
-  { path: 'moodquest-atip', component: MoodquestionAtipComponent },
-  { path: 'moodforms-atip', component: MoodformsAtipComponent },
 
   { path: 'tasks-atip', component: TasksAtipComponent },
   { path: 'addcalendar-atip', component: AddcalendarAtipComponent },
