@@ -14,7 +14,6 @@ import { AddcalendarComponent } from './pages/tipico/order/addcalendar/addcalend
 import { PerfilComponent } from './pages/tipico/custom/perfil/perfil.component';
 import { PerfilsettingsComponent } from './pages/tipico/custom/perfilsettings/perfilsettings.component';
 import { MedicationComponent } from './pages/tipico/custom/id/medication/medication.component';
-import { WishComponent } from './pages/tipico/custom/id/wish/wish.component';
 import { AddwishComponent } from './pages/tipico/custom/addwish/addwish.component';
 import { AddmedicationComponent } from './pages/tipico/custom/addmedication/addmedication.component';
 import { HomeatipComponent } from './pages/atipico/homeatip/homeatip.component';
@@ -31,8 +30,6 @@ import { FamenterComponent } from './pages/log/famenter/famenter.component';
 import { CustomuserprofComponent } from './pages/log/customuserprof/customuserprof.component';
 import { MoodbegginAtipComponent } from './pages/atipico/mood/moodbeggin-atip/moodbeggin-atip.component';
 import { TasksAtipComponent } from './pages/atipico/order/tasks-atip/tasks-atip.component';
-import { AddtasksAtipComponent } from './pages/atipico/order/addtasks-atip/addtasks-atip.component';
-import { AddcalendarAtipComponent } from './pages/atipico/order/addcalendar-atip/addcalendar-atip.component';
 import { PerfilAtipComponent } from './pages/atipico/custom/perfil-atip/perfil-atip.component';
 import { NavbarComponent } from './components/general/navbar/navbar.component';
 import { BannerComponent } from './components/home/banner/banner.component';
@@ -62,6 +59,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { NavbarAtipComponent } from './components/general/navbar-atip/navbar-atip.component';
+import { MoodregisterComponent } from './pages/tipico/mood/id/moodregister/moodregister.component';
 
 
 @NgModule({
@@ -77,7 +75,6 @@ import { NavbarAtipComponent } from './components/general/navbar-atip/navbar-ati
     PerfilComponent,
     PerfilsettingsComponent,
     MedicationComponent,
-    WishComponent,
     AddwishComponent,
     AddmedicationComponent,
     HomeatipComponent,
@@ -94,8 +91,6 @@ import { NavbarAtipComponent } from './components/general/navbar-atip/navbar-ati
     CustomuserprofComponent,
     MoodbegginAtipComponent,
     TasksAtipComponent,
-    AddtasksAtipComponent,
-    AddcalendarAtipComponent,
     PerfilAtipComponent,
     NavbarComponent,
     BannerComponent,
@@ -113,6 +108,7 @@ import { NavbarAtipComponent } from './components/general/navbar-atip/navbar-ati
     WishlistComponent,
     CrisisbuttomComponent,
     NavbarAtipComponent,
+    MoodregisterComponent,
   ],
   imports: [
     BrowserModule,

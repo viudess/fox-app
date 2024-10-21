@@ -37,6 +37,7 @@ main{
   border-radius: 10px;
   font-size: large;
   margin-bottom: 5px;
+  position: relative;
 }
 .event{
   background-color: #876E9B;

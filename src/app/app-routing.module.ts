@@ -1,3 +1,4 @@
+import { AddtasksComponent } from './pages/tipico/order/addtasks/addtasks.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -13,7 +14,6 @@ import { PerfilsettingsComponent } from './pages/tipico/custom/perfilsettings/pe
 import { AddmedicationComponent } from './pages/tipico/custom/addmedication/addmedication.component';
 import { AddwishComponent } from './pages/tipico/custom/addwish/addwish.component';
 import { MedicationComponent } from './pages/tipico/custom/id/medication/medication.component';
-import { WishComponent } from './pages/tipico/custom/id/wish/wish.component';
 
 //login
 import { RegisterComponent } from './pages/log/register/register.component';
@@ -31,9 +31,9 @@ import { SplashComponent } from './pages/log/splash/splash.component';
 import { HomeatipComponent } from './pages/atipico/homeatip/homeatip.component';
 import { MoodbegginAtipComponent } from './pages/atipico/mood/moodbeggin-atip/moodbeggin-atip.component';
 import { TasksAtipComponent } from './pages/atipico/order/tasks-atip/tasks-atip.component';
-import { AddcalendarAtipComponent } from './pages/atipico/order/addcalendar-atip/addcalendar-atip.component';
 import { PerfilAtipComponent } from './pages/atipico/custom/perfil-atip/perfil-atip.component';
 import { CrisissettingsComponent } from './pages/atipico/crisissettings/crisissettings.component';
+import { MoodregisterComponent } from './pages/tipico/mood/id/moodregister/moodregister.component';
 
 const routes: Routes = [
   //tipico
@@ -44,8 +44,10 @@ const routes: Routes = [
   { path: 'mood', component: MoodbegginComponent },
   { path: 'moodquest', component: MoodquestionComponent },
   { path: 'moodforms', component: MoodformsComponent },
+  { path: 'moodres', component: MoodregisterComponent },
 
   { path: 'tasks', component: TasksComponent },
+  { path: 'addtasks', component: AddtasksComponent },
   { path: 'addcalendar', component: AddcalendarComponent },
 
   { path: 'perfil', component: PerfilComponent },
@@ -53,7 +55,6 @@ const routes: Routes = [
   { path: 'addmed', component: AddmedicationComponent },
   { path: 'addwish', component: AddwishComponent },
   { path: 'medication', component: MedicationComponent },
-  { path: 'wish', component: WishComponent },
 
   //log
   { path: 'register', component: RegisterComponent },
@@ -74,7 +75,6 @@ const routes: Routes = [
   { path: 'mood-atip', component: MoodbegginAtipComponent },
 
   { path: 'tasks-atip', component: TasksAtipComponent },
-  { path: 'addcalendar-atip', component: AddcalendarAtipComponent },
 
   { path: 'perfil-atip', component: PerfilAtipComponent },
 ];

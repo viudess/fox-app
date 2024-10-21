@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AddtasksAtipComponent } from './addtasks-atip.component';
+import { MoodregisterComponent } from './moodregister.component';
 
-describe('AddtasksAtipComponent', () => {
-  let component: AddtasksAtipComponent;
-  let fixture: ComponentFixture<AddtasksAtipComponent>;
+describe('MoodregisterComponent', () => {
+  let component: MoodregisterComponent;
+  let fixture: ComponentFixture<MoodregisterComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AddtasksAtipComponent]
+      declarations: [MoodregisterComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AddtasksAtipComponent);
+    fixture = TestBed.createComponent(MoodregisterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

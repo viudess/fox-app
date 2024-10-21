@@ -1,0 +1,20 @@
+<header>
+  <mat-icon onclick="window.history.back()">arrow_back_ios</mat-icon>
+  <h1>Criar Tarefa</h1>
+</header>
+<form (ngSubmit)="onSubmit()">
+  <section>
+    <input type="text" placeholder="Nome da tarefa" [(ngModel)]="tarefa" name="titulo">
+    <div class="horario">
+      <input type="number" placeholder="Hora" [(ngModel)]="hora" name="hora" (input)="atualizarHorario()">
+      <input type="number" placeholder="Minuto" [(ngModel)]="minuto" name="minuto" (input)="atualizarHorario()">
+      <button type="button" (click)="alternarAmPm(); atualizarHorario()">{{ periodo }}</button>
+    </div>
+    <div class="data">
+      <button type="button" (click)="mudarCor(0)" [ngStyle]="{'color': clicado === 0 ? 'white' : '', 'background-color': clicado === 0 ? '#876E9B' : ''}">Hoje</button>
+      <button type="button" (click)="mudarCor(1)" [ngStyle]="{'color': clicado === 1 ? 'white' : '', 'background-color': clicado === 1 ? '#876E9B' : ''}">Diário</button>
+      <button type="button" (click)="mudarCor(2)" [ngStyle]="{'color': clicado === 2 ? 'white' : '', 'background-color': clicado === 2 ? '#876E9B' : ''}">Semanal</button>
+    </div>
+    <button type="submit" class="concluir">Concluir</button>
+  </section>
+</form>
