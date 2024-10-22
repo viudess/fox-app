@@ -43,3 +43,6 @@ div{
   font-size: large;
   margin-top: 10px;
 }
+.todo div{
+  margin-top: 10px;
+}

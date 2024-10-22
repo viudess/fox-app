@@ -1,0 +1,62 @@
+section{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.container{
+  margin: 5px;
+  background-color: #D9D9D9;
+  width: 85%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+  border-radius: 10px;
+}
+.container.reminder{
+  background-color: #D6C8E1;
+}
+.tarefa{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.tarefa p{
+  font-size: 12px;
+}
+.radio{
+  width: 25px;
+  height: 25px;
+  border: 2px solid #704D97;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.radio.reminder{
+  background-color: #704D97;
+}
+.radio img{
+  width: 80%;
+  height: 60%;
+}
+.botoes{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.remove{
+  background-color: #B02828;
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+mat-icon{
+  color: white;
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
