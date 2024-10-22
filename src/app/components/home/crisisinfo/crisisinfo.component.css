@@ -16,9 +16,6 @@ main{
 .header h1{
   font-size: medium;
 }
-.list{
-  height: 80px;
-}
 .close{
   display: flex;
   justify-content: center;
@@ -35,4 +32,5 @@ button{
   padding-inline: 40px;
   margin-bottom: 10px;
   border-radius: 20px;
+  margin-top: 10px;
 }

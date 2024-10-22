@@ -3,16 +3,20 @@
     <div class="header">
       <h1>Instruções para crise</h1>
     </div>
-    <div class="list"></div>
+    <div class="list">
+      <app-inst-list></app-inst-list>
+    </div>
   </section>
   <section>
     <div class="header">
       <h1>Ligar para pedir suporte</h1>
     </div>
-    <div class="list"></div>
+    <div class="list">
+      <app-phone-list></app-phone-list>
+    </div>
   </section>
   <div class="close">
-    <button mat-button (click)="close()">Voltar</button>
+    <button (click)="close()">Voltar</button>
   </div>
 </main>
 

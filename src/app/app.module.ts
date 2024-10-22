@@ -62,6 +62,10 @@ import { NavbarAtipComponent } from './components/general/navbar-atip/navbar-ati
 import { MoodregisterComponent } from './pages/tipico/mood/id/moodregister/moodregister.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { CrisisinfoComponent } from './components/home/crisisinfo/crisisinfo.component';
+import { InstructionsComponent } from './components/home/crisis/instructions/instructions.component';
+import { PhonenumberComponent } from './components/home/crisis/phonenumber/phonenumber.component';
+import { InstListComponent } from './components/home/crisis/inst-list/inst-list.component';
+import { PhoneListComponent } from './components/home/crisis/phone-list/phone-list.component';
 
 @NgModule({
   declarations: [
@@ -111,6 +115,10 @@ import { CrisisinfoComponent } from './components/home/crisisinfo/crisisinfo.com
     NavbarAtipComponent,
     MoodregisterComponent,
     CrisisinfoComponent,
+    InstructionsComponent,
+    PhonenumberComponent,
+    InstListComponent,
+    PhoneListComponent,
   ],
   imports: [
     BrowserModule,
