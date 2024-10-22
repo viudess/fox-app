@@ -60,7 +60,8 @@ import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { NavbarAtipComponent } from './components/general/navbar-atip/navbar-atip.component';
 import { MoodregisterComponent } from './pages/tipico/mood/id/moodregister/moodregister.component';
-
+import { MatDialogModule } from '@angular/material/dialog';
+import { CrisisinfoComponent } from './components/home/crisisinfo/crisisinfo.component';
 
 @NgModule({
   declarations: [
@@ -109,6 +110,7 @@ import { MoodregisterComponent } from './pages/tipico/mood/id/moodregister/moodr
     CrisisbuttomComponent,
     NavbarAtipComponent,
     MoodregisterComponent,
+    CrisisinfoComponent,
   ],
   imports: [
     BrowserModule,
@@ -121,7 +123,8 @@ import { MoodregisterComponent } from './pages/tipico/mood/id/moodregister/moodr
     MatCardModule,
     FormsModule,
     HttpClientModule,
-    CommonModule
+    CommonModule,
+    MatDialogModule
   ],
   providers: [
     provideAnimationsAsync()
