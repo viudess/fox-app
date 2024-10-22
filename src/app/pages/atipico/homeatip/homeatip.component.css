@@ -3,7 +3,7 @@ main{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 25px;
 }
 
 /* botoes */
@@ -21,7 +21,7 @@ main{
   border-radius: 25px;
   width: 110px;
   height: 110px;
-  margin-inline: 12px;
+  margin-left: 18px;
   margin-bottom: 20px;
 }
 .botoes div{
@@ -67,6 +67,6 @@ main{
 .med-list{
   display: flex;
   justify-content: flex-start;
-  width: 100%;
-  padding-left: 10px;
+  width: 90%;
+  margin-top: 5px;
 }
