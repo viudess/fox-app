@@ -7,12 +7,13 @@ section{
 .container{
   margin: 5px;
   background-color: #D9D9D9;
-  width: 85%;
+  width: 90%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   height: 60px;
   border-radius: 10px;
+  padding-inline: 30px;
 }
 .container.reminder{
   background-color: #D6C8E1;
