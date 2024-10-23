@@ -1,4 +1,4 @@
-.evento{
+.phone{
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -6,17 +6,14 @@
   padding: 5px;
   padding-left: 20px;
 }
-.bola{
-  background-color: #876E9B;
-  width: 10px;
-  height: 10px;
+.call{
   margin-right: 10px;
-  border-radius: 100%;
+  text-align: center;
 }
-.evento h1{
+.phone h1{
   font-size: medium;
 }
-.evento p{
+.phone p{
   font-size: smaller;
   color: #818181;
 }

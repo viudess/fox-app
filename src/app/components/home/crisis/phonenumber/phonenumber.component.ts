@@ -6,7 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './phonenumber.component.css'
 })
 export class PhonenumberComponent {
-  @Input() nomeEvento!: string;
-  @Input() horario!: string;
-  @Input() data!: string;
+  @Input() phoneNumber!: string;
 }

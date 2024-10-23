@@ -6,7 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './instructions.component.css'
 })
 export class InstructionsComponent {
-  @Input() nomeEvento!: string;
-  @Input() horario!: string;
-  @Input() data!: string;
+  @Input() instrucao!: string;
 }

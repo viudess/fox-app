@@ -1,4 +1,4 @@
-.evento{
+.inst{
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -13,10 +13,10 @@
   margin-right: 10px;
   border-radius: 100%;
 }
-.evento h1{
+.inst h1{
   font-size: medium;
 }
-.evento p{
+.inst p{
   font-size: smaller;
   color: #818181;
 }

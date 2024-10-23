@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './inst-list.component.css'
 })
 export class InstListComponent {
-  eventos=[
-    {nomeEvento: 'Evento', data: '31/10', horario:'20:00'},
-    {nomeEvento: 'Evento', data: '31/10', horario:'20:00'},
+  instrucs=[
+    {instrucao: 'Instrução 1'},
+    {instrucao: 'Instrução 2'},
   ]
 }
