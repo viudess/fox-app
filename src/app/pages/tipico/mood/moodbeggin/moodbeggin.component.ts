@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './moodbeggin.component.css'
 })
 export class MoodbegginComponent {
-
+  
 }

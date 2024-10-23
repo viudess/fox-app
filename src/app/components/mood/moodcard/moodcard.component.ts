@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-moodcard',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './moodcard.component.css'
 })
 export class MoodcardComponent {
-
+  @Input() data!: string;
+  @Input() hora!: string;
 }
