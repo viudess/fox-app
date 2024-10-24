@@ -3,5 +3,55 @@
   <h1>Botão de crise</h1>
 </header>
 <main>
-
+  <h1>Durante uma crise, você...</h1>
+  <div>
+    <h3>Fica apto para falar?</h3>
+    <form class="check">
+      <div class="gridcheck" (click)="mudarCor(0, 0)">
+        <div class="radio"
+          [ngStyle]="{'background-color': sobrecarregado === 0 ? '#704D97' : '', 'border': sobrecarregado === 0 ? '1px solid #704D97' : ''}">
+          <img src="ok-image.png" alt="" [hidden]="sobrecarregado !== 0">
+        </div>
+        <h2>Sim</h2>
+      </div>
+      <div class="gridcheck" (click)="mudarCor(0, 1)">
+        <div class="radio"
+          [ngStyle]="{'background-color': sobrecarregado === 1 ? '#704D97' : '', 'border': sobrecarregado === 1 ? '1px solid #704D97' : ''}">
+          <img src="ok-image.png" alt="" [hidden]="sobrecarregado !== 1">
+        </div>
+        <h2>Não</h2>
+      </div>
+    </form>
+  </div>
+  <div>
+    <h3>Prefere evitar contato físico?</h3>
+    <form class="check">
+      <div class="gridcheck" (click)="mudarCor(1, 0)">
+        <div class="radio"
+          [ngStyle]="{'background-color': verbal === 0 ? '#704D97' : '', 'border': verbal === 0 ? '1px solid #704D97' : ''}">
+          <img src="ok-image.png" alt="" [hidden]="verbal !== 0">
+        </div>
+        <h2>Sim</h2>
+      </div>
+      <div class="gridcheck" (click)="mudarCor(1, 1)">
+        <div class="radio"
+          [ngStyle]="{'background-color': verbal === 1 ? '#704D97' : '', 'border': verbal === 1 ? '1px solid #704D97' : ''}">
+          <img src="ok-image.png" alt="" [hidden]="verbal !== 1">
+        </div>
+        <h2>Não</h2>
+      </div>
+    </form>
+  </div>
+  <div>
+    <h3>
+      Adicione uma descrição detalhada de como prefere ser ajudado durante uma crise:
+    </h3>
+    <div class="gridinput">
+      <textarea name="" id="" placeholder="Digite aqui"></textarea>
+    </div>
+  </div>
+  <div class="finalizar">
+    <button onclick="window.history.back()">Concluir</button>
+    <button>Editar configurações</button>
+  </div>
 </main>
