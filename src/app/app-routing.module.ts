@@ -37,7 +37,7 @@ import { MoodregisterComponent } from './pages/tipico/mood/id/moodregister/moodr
 
 const routes: Routes = [
   //tipico
-  { path: '', redirectTo: '/splash', pathMatch: 'full' },
+  { path: '', redirectTo: '/splash', pathMatch: 'full', },
 
   { path: 'home', component: HometipComponent },
 

@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-addtasks',
@@ -6,6 +7,11 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrl: './addtasks.component.css'
 })
 export class AddtasksComponent {
+
+  constructor(private router: Router){
+
+  }
+
   @Output() onAddTask = new EventEmitter();
 
   clicado: number | null = 0;
@@ -43,6 +49,8 @@ export class AddtasksComponent {
   }
 
   onSubmit() {
+    // let ind: boolean = true;
+    // this.router.navigateByUrl( ind ? '/tasks-atip' : '/tasks')
     this.atualizarHorario();
     if (!this.tarefa) {
       alert('Adicione a tarefa!');
