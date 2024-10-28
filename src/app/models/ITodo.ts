@@ -1,11 +1,12 @@
 import { IUser } from "./IUser";
 
 export interface ITodo {
-  id: string;
+  id?: number;
   task: string;
   date:  Date | string;
-  everyDay: Boolean;
+  time : Date | string,
+  everyDay: boolean;
   createdBy: string;
   assignedTo: Array<IUser | undefined>;
-  check: Boolean;
+  check: boolean;
 }

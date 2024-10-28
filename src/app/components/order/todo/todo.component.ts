@@ -1,36 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-import { TodoApi } from '../../../services/todo.api';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { ITodo } from '../../../models/ITodo';
 
 @Component({
   selector: 'app-todo',
   templateUrl: './todo.component.html',
   styleUrl: './todo.component.css'
 })
-export class TodoComponent implements OnInit {
-  constructor(
-    private todoApi: TodoApi
-  ){}
+export class TodoComponent {
 
-  ngOnInit(): void {
-    this.fetchTodo()
-    this.sendTodo()
+  @Input() todo!:ITodo;
+  @Output() onDeleteTask = new EventEmitter<ITodo>();
+  @Output() onToggleConcluido = new EventEmitter<ITodo>();
+
+  onDelete(todo: ITodo){
+    this.onDeleteTask.emit(todo);
   }
 
-  async fetchTodo(){
-    const data = await this.todoApi.getAll()
-    console.log(data)
-  }
-
-  async sendTodo(){
-    const data = await this.todoApi.sendTodo({
-      id: '',
-      task: 'string',
-      date:  new Date(),
-      everyDay: false,
-      createdBy: 'IUser',
-      assignedTo: [],
-      check: false,
-    })
-    console.log(data)
+  onToggle(todo: ITodo){
+    this.onToggleConcluido.emit(todo);
   }
 }

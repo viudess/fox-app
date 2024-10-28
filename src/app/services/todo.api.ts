@@ -1,25 +1,30 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { ITodo } from "../models/ITodo";
+import { Observable } from "rxjs";
 
-@Injectable({providedIn: 'root'})
+@Injectable({
+  providedIn: 'root'
+})
 export class TodoApi{
-  constructor(
-    private client: HttpClient
-  ){}
-  async getAll() {
-    return await this.client.get("http://localhost:3333/api/todo").toPromise()
+
+  private apiURL = "http://localhost:3333" + '/api/todo';
+
+  constructor(private client: HttpClient){}
+
+  getAll() : Observable<ITodo[]>{
+    return this.client.get<ITodo[]>(this.apiURL)
   }
 
-  async sendTodo(todo: ITodo) {
-    return await this.client.post("http://localhost:3333/api/todo", todo).toPromise()
+  deleteTodo(todo : ITodo) : Observable<ITodo>{
+    return this.client.delete<ITodo>(`${this.apiURL}/${todo.id}`)
   }
 
-  async updateTodo(todo: ITodo){
-    return await this.client.put(`http://localhost:3333/api/todo/${todo.id}`, todo).toPromise()
+  updateTodo(todo : ITodo) : Observable<ITodo>{
+    return this.client.put<ITodo>(`${this.apiURL}/${todo.id}`, todo)
   }
 
-  async deleteTodo(todo: ITodo) {
-    return await this.client.delete(`http://localhost:3333/api/todo/${todo.id}`).toPromise();
+  addTodo(todo : ITodo) : Observable<ITodo>{
+    return this.client.post<ITodo>(`${this.apiURL}`, todo)
   }
 }
