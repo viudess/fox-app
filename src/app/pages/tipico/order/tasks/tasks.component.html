@@ -15,11 +15,11 @@
   <div class="todo">
     <h1>Tarefas</h1>
     <div>
-      <app-addtasks (onAddTask)="addTodo($event)" ></app-addtasks>
+      <app-addtasks (onAddTodo)="addTodo($event)" ></app-addtasks>
       <app-todo
       *ngFor="let todo of todos"
       [todo]="todo"
-      (onDeleteTask)="deleteTodo($event)"
+      (onDeleteTodo)="deleteTodo($event)"
       (onToggleConcluido)="toggleConcluido($event)"
       >
       </app-todo>

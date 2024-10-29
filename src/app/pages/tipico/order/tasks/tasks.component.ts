@@ -1,16 +1,16 @@
-import { Component } from '@angular/core';
-import { TodoApi } from '../../../../services/todo.api';
+import { Component, OnInit } from '@angular/core';
 import { ITodo } from '../../../../models/ITodo';
+import { TodoService } from '../../../../services/todo.service';
 
 @Component({
   selector: 'app-tasks',
   templateUrl: './tasks.component.html',
   styleUrl: './tasks.component.css'
 })
-export class TasksComponent {
+export class TasksComponent implements OnInit {
   todos: ITodo[] = [];
 
-  constructor(private todoApi:TodoApi){
+  constructor(private todoApi:TodoService){
 
   }
   ngOnInit(): void{
@@ -18,10 +18,9 @@ export class TasksComponent {
       this.todos = dado;
       console.log(dado);
     });
-
   }
 
-  addTodo(todo : ITodo){
+  addTodo(todo : ITodo) {
     this.todoApi.addTodo(todo).subscribe((todo) => {
       this.todos.push(todo)
     })

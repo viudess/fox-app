@@ -9,11 +9,11 @@ import { ITodo } from '../../../models/ITodo';
 export class TodoComponent {
 
   @Input() todo!:ITodo;
-  @Output() onDeleteTask = new EventEmitter<ITodo>();
+  @Output() onDeleteTodo = new EventEmitter<ITodo>();
   @Output() onToggleConcluido = new EventEmitter<ITodo>();
 
   onDelete(todo: ITodo){
-    this.onDeleteTask.emit(todo);
+    this.onDeleteTodo.emit(todo);
   }
 
   onToggle(todo: ITodo){

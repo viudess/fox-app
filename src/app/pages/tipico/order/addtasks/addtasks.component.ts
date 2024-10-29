@@ -11,19 +11,19 @@ export class AddtasksComponent {
 
   constructor(private router: Router){}
 
-@Output() onAddTask = new EventEmitter<ITodo>();
+@Output() onAddTodo = new EventEmitter<ITodo>();
 
 clicado: number | null = 0;
 task: string = '';
 hour: number | null = null;
 minuto: number | null = null;
 period: string = 'AM';
-time: string = '';
 date: string = 'Hoje';
+time: string = '';
 check: boolean = false;
 
-everyDay: boolean = false;
-createdBy: string = '';
+  everyDay: boolean = false;
+// createdBy: string = '';
 
 
 mudarCor(index: number) {
@@ -52,7 +52,6 @@ atualizarHorario() {
 }
 
 onSubmit() {
-  this.router.navigateByUrl('/tasks')
   this.atualizarHorario();
   if (!this.task) {
     alert('Adicione a tarefa!');
@@ -63,14 +62,15 @@ onSubmit() {
     task: this.task,
     date: this.date,
     time: this.time,
-    everyDay: this.everyDay,
-    createdBy: this.createdBy,
-    assignedTo: [],
+     everyDay: this.everyDay,
+    // createdBy: this.createdBy,
+    // assignedTo: [],
     check: this.check,
   };
 
+  console.log(novaTarefa)
 
-  this.onAddTask.emit(novaTarefa);
+  this.onAddTodo.emit(novaTarefa);
 
   this.task = '';
   this.date = '';
