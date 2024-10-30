@@ -8,14 +8,22 @@
     <h1>Criar evento (Calendário)</h1>
     <mat-icon>add_circle</mat-icon>
   </button>
-  <button class="add-to-do" routerLink="/addtasks">
+  <!-- <button class="add-to-do" routerLink="/addtasks">
     <h1>Adicionar tafera (To-do)</h1>
     <mat-icon>add_circle</mat-icon>
-  </button>
+  </button> -->
   <div class="todo">
-    <h1>Tarefas</h1>
+    <h1>Criar tarefa</h1>
     <div>
-      <app-todo></app-todo>
+      <app-addtasks (onAddTodo)="addTodo($event)" ></app-addtasks>
+      <h1>Tarefas</h1>
+      <app-todo
+      *ngFor="let todo of todos"
+      [todo]="todo"
+      (onDeleteTodo)="deleteTodo($event)"
+      (onToggleConcluido)="toggleConcluido($event)"
+      >
+      </app-todo>
     </div>
   </div>
 </main>

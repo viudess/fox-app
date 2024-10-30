@@ -22,7 +22,7 @@ date: string = 'Hoje';
 time: string = '';
 check: boolean = false;
 
-  everyDay: boolean = false;
+// everyDay: boolean = false;
 // createdBy: string = '';
 
 
@@ -62,13 +62,11 @@ onSubmit() {
     task: this.task,
     date: this.date,
     time: this.time,
-     everyDay: this.everyDay,
+    // everyDay: this.everyDay,
     // createdBy: this.createdBy,
     // assignedTo: [],
     check: this.check,
   };
-
-  console.log(novaTarefa)
 
   this.onAddTodo.emit(novaTarefa);
 

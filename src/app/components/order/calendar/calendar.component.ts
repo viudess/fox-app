@@ -29,19 +29,20 @@ export class CalendarComponent implements OnInit{
 
     this.calendarDays = [];
 
-    for (let i = firstDay; i > 0; i--) {
-      this.calendarDays.push(prevLastDate - i + 1);
+    for (let i = firstDay - 1; i >= 0; i--) {
+      this.calendarDays.push(prevLastDate - i);
     }
 
     for (let i = 1; i <= lastDate; i++) {
       this.calendarDays.push(i);
     }
 
-    const remainingDays = 42 - this.calendarDays.length;
-    for (let i = 1; i <= remainingDays; i++) {
+    const totalDays = this.calendarDays.length;
+    for (let i = 1; i <= 42 - totalDays; i++) {
       this.calendarDays.push(i);
     }
   }
+
 
   isCurrentDay(day: number): boolean {
     const today = new Date();
@@ -50,9 +51,10 @@ export class CalendarComponent implements OnInit{
 
   isDifferentMonth(index: number): boolean {
     const firstDay = new Date(this.currentYear, this.currentMonth, 1).getDay();
-    const totalDays = new Date(this.currentYear, this.currentMonth + 1, 0).getDate();
-    return index < firstDay || index >= firstDay + totalDays;
+    const lastDate = new Date(this.currentYear, this.currentMonth + 1, 0).getDate();
+    return index < firstDay || index >= firstDay + lastDate;
   }
+
 
   prevMonth() {
     if (this.currentMonth === 0) {

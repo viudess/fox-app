@@ -3,6 +3,5 @@ export interface ITodo {
   task: string;
   date:  string;
   time: string;
-  everyDay: boolean;
   check: boolean;
 }
