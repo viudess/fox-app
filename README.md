@@ -4,12 +4,12 @@ Aplicativo de organização familiar com foco em ajudar neurodivergentes
 
 ## Integrantes
 
-Eduardo Viudes Chorro
-Júlia Leal Benevides Gomes
-Pedro Araújo dos Santos
-Yannie Yshin Kang
-Ana Clara de Oliveira Nascimento
-Laura Pinheiro Kalybatas
+Eduardo Viudes Chorro,
+Júlia Leal Benevides Gomes,
+Pedro Araújo dos Santos,
+Yannie Yshin Kang,
+Ana Clara de Oliveira Nascimento,
+Laura Pinheiro Kalybatas.
 
 ## Generated
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.8.
