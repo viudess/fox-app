@@ -1,6 +1,6 @@
-import { Component, EventEmitter, Output } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ITodo } from '../../../../models/ITodo';
+import { TodoService } from '../../../../services/todo.service';
 
 @Component({
   selector: 'app-addtasks',
@@ -9,70 +9,32 @@ import { ITodo } from '../../../../models/ITodo';
 })
 export class AddtasksComponent {
 
-  constructor(private router: Router){}
+  tarefas: ITodo[] = [];
 
-@Output() onAddTodo = new EventEmitter<ITodo>();
+  constructor(private taskService:TodoService){
 
-clicado: number | null = 0;
-task: string = '';
-hour: number | null = null;
-minuto: number | null = null;
-period: string = 'AM';
-date: string = 'Hoje';
-time: string = '';
-check: boolean = false;
-
-// everyDay: boolean = false;
-// createdBy: string = '';
-
-
-mudarCor(index: number) {
-  this.clicado = index;
-  switch (index) {
-    case 0:
-      this.date = 'Hoje';
-      break;
-    case 1:
-      this.date = 'Diário';
-      break;
-    case 2:
-      this.date = 'Semanal';
-      break;
   }
-}
+  ngOnInit(): void{
 
-alternarAmPm() {
-  this.period = this.period === 'AM' ? 'PM' : 'AM';
-}
-
-atualizarHorario() {
-  const horaStr = this.hour !== null ? this.hour.toString().padStart(2, '0') : '00';
-  const minutoStr = this.minuto !== null ? this.minuto.toString().padStart(2, '0') : '00';
-  this.time = `${horaStr}:${minutoStr} ${this.period}`;
-}
-
-onSubmit() {
-  this.atualizarHorario();
-  if (!this.task) {
-    alert('Adicione a tarefa!');
-    return;
+    this.taskService.getTasks().subscribe((dado) => {
+      this.tarefas = dado;
+      console.log(dado);
+    });
   }
 
-  const novaTarefa: ITodo = {
-    task: this.task,
-    date: this.date,
-    time: this.time,
-    // everyDay: this.everyDay,
-    // createdBy: this.createdBy,
-    // assignedTo: [],
-    check: this.check,
-  };
+  AddTask(tarefa : ITodo){
+    this.taskService.AddTask(tarefa).subscribe((tarefa) => {
+      this.tarefas.push(tarefa)
+    })
+  }
 
-  this.onAddTodo.emit(novaTarefa);
+  deleteTask(tarefa : ITodo){
+    this.taskService.deleteTask(tarefa).subscribe(() =>
+      (this.tarefas = this.tarefas.filter((t) => t.id !== tarefa.id)));
+  }
 
-  this.task = '';
-  this.date = '';
-  this.time = '';
-  this.check = false;
-}
+  toggleConcluido(tarefa : ITodo){
+    tarefa.concluido = !tarefa.concluido;
+    this.taskService.updateTask(tarefa).subscribe();
+  }
 }

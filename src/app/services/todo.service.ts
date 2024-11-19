@@ -2,29 +2,30 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ITodo } from '../models/ITodo';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TodoService {
 
-  private apiURL = "http://localhost:3333" + '/api/todo';
+  private apiURL = environment.api + '/tasks';
 
-  constructor(private client: HttpClient){}
+  constructor(private http: HttpClient) { }
 
-  getAll() : Observable<ITodo[]>{
-    return this.client.get<ITodo[]>(this.apiURL)
+  getTasks() : Observable<ITodo[]>{
+    return this.http.get<ITodo[]>(this.apiURL)
   }
 
-  deleteTodo(todo : ITodo) : Observable<ITodo>{
-    return this.client.delete<ITodo>(`${this.apiURL}/${todo.id}`)
+  deleteTask(tarefa : ITodo) : Observable<ITodo>{
+    return this.http.delete<ITodo>(`${this.apiURL}/${tarefa.id}`)
   }
 
-  updateTodo(todo : ITodo) : Observable<ITodo>{
-    return this.client.put<ITodo>(`${this.apiURL}/${todo.id}`, todo)
+  updateTask(tarefa : ITodo) : Observable<ITodo>{
+    return this.http.put<ITodo>(`${this.apiURL}/${tarefa.id}`, tarefa)
   }
 
-  addTodo(todo : ITodo) : Observable<ITodo>{
-    return this.client.post<ITodo>(`${this.apiURL}`, todo)
+  AddTask(tarefa : ITodo) : Observable<ITodo>{
+    return this.http.post<ITodo>(`${this.apiURL}`, tarefa)
   }
 }

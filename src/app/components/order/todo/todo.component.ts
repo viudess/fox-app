@@ -8,15 +8,15 @@ import { ITodo } from '../../../models/ITodo';
 })
 export class TodoComponent {
 
-  @Input() todo!:ITodo;
-  @Output() onDeleteTodo = new EventEmitter<ITodo>();
+  @Input() tarefa!:ITodo;
+  @Output() onDeleteTask = new EventEmitter<ITodo>();
   @Output() onToggleConcluido = new EventEmitter<ITodo>();
 
-  onDelete(todo: ITodo){
-    this.onDeleteTodo.emit(todo);
+  onDelete(tarefa: ITodo){
+    this.onDeleteTask.emit(tarefa);
   }
 
-  onToggle(todo: ITodo){
-    this.onToggleConcluido.emit(todo);
+  onToggle(tarefa: ITodo){
+    this.onToggleConcluido.emit(tarefa);
   }
 }

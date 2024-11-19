@@ -67,6 +67,7 @@ import { PhonenumberComponent } from './components/home/crisis/phonenumber/phone
 import { InstListComponent } from './components/home/crisis/inst-list/inst-list.component';
 import { PhoneListComponent } from './components/home/crisis/phone-list/phone-list.component';
 import { MoodlistComponent } from './components/mood/moodlist/moodlist.component';
+import { AddtodoComponent } from './components/order/addtodo/addtodo.component';
 
 @NgModule({
   declarations: [
@@ -121,6 +122,7 @@ import { MoodlistComponent } from './components/mood/moodlist/moodlist.component
     InstListComponent,
     PhoneListComponent,
     MoodlistComponent,
+    AddtodoComponent,
   ],
   imports: [
     BrowserModule,

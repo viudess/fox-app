@@ -1,20 +1,21 @@
 <section>
-  <div class="container" [ngClass]="{reminder: todo.check}">
-    <label>{{todo.task}}</label>
+  <div class="container" [ngClass]="{reminder: tarefa.concluido}">
+    <label for="">{{tarefa.titulo}}</label>
     <div class="tarefa">
-      <label>{{todo.date}}</label>
-      <p>{{todo.time}}</p>
+      <label for="">{{tarefa.data}}</label>
+      <p for="">{{tarefa.horario}}</p>
     </div>
     <div class="botoes">
       <div
         class="radio"
-        (click)="onToggle(todo)"
-        [ngClass]="{reminder: todo.check}">
-        <img src="ok-image.png" alt="" *ngIf="todo.check">
+        (click)="onToggle(tarefa)"
+        [ngClass]="{reminder: tarefa.concluido}">
+        <img src="ok-image.png" alt="" *ngIf="tarefa.concluido">
       </div>
-      <button (click)="onDelete(todo)" class="remove">
+      <button (click)="onDelete(tarefa)" class="remove">
         <mat-icon>remove</mat-icon>
       </button>
     </div>
+
   </div>
 </section>

@@ -8,31 +8,33 @@ import { ITodo } from '../../../../models/ITodo';
   styleUrl: './tasks-atip.component.css'
 })
 export class TasksAtipComponent implements OnInit{
-  todos: ITodo[] = [];
+  tarefas: ITodo[] = [];
 
-  constructor(private todoApi:TodoService){
+  constructor(private taskService:TodoService){
 
   }
   ngOnInit(): void{
-    this.todoApi.getAll().subscribe((dado) => {
-      this.todos = dado;
+
+    this.taskService.getTasks().subscribe((dado) => {
+      this.tarefas = dado;
       console.log(dado);
     });
+
   }
 
-  addTodo(todo : ITodo) {
-    this.todoApi.addTodo(todo).subscribe((todo) => {
-      this.todos.push(todo)
+  AddTask(tarefa : ITodo){
+    this.taskService.AddTask(tarefa).subscribe((tarefa) => {
+      this.tarefas.push(tarefa)
     })
   }
 
-  deleteTodo(todo : ITodo){
-    this.todoApi.deleteTodo(todo).subscribe(() =>
-      (this.todos = this.todos.filter((t) => t.id !== todo.id)));
+  deleteTask(tarefa : ITodo){
+    this.taskService.deleteTask(tarefa).subscribe(() =>
+      (this.tarefas = this.tarefas.filter((t) => t.id !== tarefa.id)));
   }
 
-  toggleConcluido(todo : ITodo){
-    todo.check = !todo.check;
-    this.todoApi.updateTodo(todo).subscribe();
+  toggleConcluido(tarefa : ITodo){
+    tarefa.concluido = !tarefa.concluido;
+    this.taskService.updateTask(tarefa).subscribe();
   }
 }
