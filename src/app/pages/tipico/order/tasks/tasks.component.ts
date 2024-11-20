@@ -36,4 +36,12 @@ export class TasksComponent implements OnInit {
     tarefa.concluido = !tarefa.concluido;
     this.taskService.updateTask(tarefa).subscribe();
   }
+
+  hasPendingTasks(): boolean {
+    return this.tarefas.some((tarefa) => !tarefa.concluido);
+  }
+
+  hasCompletedTasks(): boolean {
+    return this.tarefas.some((tarefa) => tarefa.concluido);
+  }
 }

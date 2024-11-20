@@ -46,3 +46,23 @@ div{
 .todo div{
   margin-top: 10px;
 }
+
+.noTasks{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.noTasks div{
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #C2B7CB;
+  width: 90%;
+  border-radius: 10px;
+}
+.noTasks h2{
+  font-size: large;
+  color: white;
+  padding: 10px;
+}

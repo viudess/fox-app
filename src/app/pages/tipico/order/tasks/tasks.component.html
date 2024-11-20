@@ -12,13 +12,39 @@
     <h1>Adicionar tafera (To-do)</h1>
     <mat-icon>add_circle</mat-icon>
   </button>
+
   <div class="todo">
     <h1>Tarefas</h1>
-    <app-todo
-    *ngFor="let tarefa of tarefas"
-    [tarefa]="tarefa"
-    (onDeleteTask)="deleteTask($event)"
-    (onToggleConcluido)="toggleConcluido($event)"
-    ></app-todo>
-  </div>
+    <ng-container *ngIf="hasPendingTasks(); else noTasks">
+        <ng-container *ngFor="let tarefa of tarefas">
+            <app-todo
+                *ngIf="!tarefa.concluido"
+                [tarefa]="tarefa"
+                (onDeleteTask)="deleteTask($event)"
+                (onToggleConcluido)="toggleConcluido($event)"
+            ></app-todo>
+        </ng-container>
+    </ng-container>
+
+    <ng-template #noTasks>
+        <div class="noTasks">
+          <div>
+            <h2>Não há tarefas para realizar</h2>
+          </div>
+        </div>
+    </ng-template>
+
+    <ng-container *ngIf="hasCompletedTasks()">
+        <h1>Finalizados</h1>
+        <ng-container *ngFor="let tarefa of tarefas">
+            <app-todo
+                *ngIf="tarefa.concluido"
+                [tarefa]="tarefa"
+                (onDeleteTask)="deleteTask($event)"
+                (onToggleConcluido)="toggleConcluido($event)"
+            ></app-todo>
+        </ng-container>
+    </ng-container>
+</div>
+
 </main>
