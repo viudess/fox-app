@@ -1,8 +1,4 @@
-<div *ngFor="let remedio of medicacoes">
-  <app-remedy
-  [nomeRemedio]="remedio.nomeRemedio"
-  [horario]="remedio.horario"
-  [quantidade]="remedio.quantidade"
-  [vezes]="remedio.vezes">
-</app-remedy>
-</div>
+<app-remedy
+  *ngFor="let remedio of remedios"
+  [remedio]="remedio"
+></app-remedy>

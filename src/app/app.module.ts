@@ -68,6 +68,8 @@ import { InstListComponent } from './components/home/crisis/inst-list/inst-list.
 import { PhoneListComponent } from './components/home/crisis/phone-list/phone-list.component';
 import { MoodlistComponent } from './components/mood/moodlist/moodlist.component';
 import { AddtodoComponent } from './components/order/addtodo/addtodo.component';
+import { WishComponent } from './pages/tipico/custom/id/wish/wish.component';
+import { AddremedyComponent } from './components/custom/addremedy/addremedy.component';
 
 @NgModule({
   declarations: [
@@ -123,6 +125,8 @@ import { AddtodoComponent } from './components/order/addtodo/addtodo.component';
     PhoneListComponent,
     MoodlistComponent,
     AddtodoComponent,
+    WishComponent,
+    AddremedyComponent,
   ],
   imports: [
     BrowserModule,

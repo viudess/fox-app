@@ -1,24 +1,29 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { IRemedy } from '../../../../models/IRemedy';
+import { RemedyService } from '../../../../services/remedy.service';
 
 @Component({
   selector: 'app-addmedication',
   templateUrl: './addmedication.component.html',
   styleUrl: './addmedication.component.css'
 })
-export class AddmedicationComponent {
-  horarios: { hora: string, minuto: string, periodo: string }[] = [
-    { hora: '', minuto: '', periodo: 'AM' }
-  ];
+export class AddmedicationComponent implements OnInit{
+  remedios: IRemedy[] = [];
 
-  alternarAmPm(index: number) {
-    this.horarios[index].periodo = this.horarios[index].periodo === 'AM' ? 'PM' : 'AM';
+  constructor(private taskService:RemedyService){
+
+  }
+  ngOnInit(): void{
+
+    this.taskService.getRemedy().subscribe((dado) => {
+      this.remedios = dado;
+      console.log(dado);
+    });
   }
 
-  adicionarHorario() {
-    this.horarios.push({ hora: '', minuto: '', periodo: 'AM' });
-  }
-
-  removerHorario(index: number) {
-    this.horarios.splice(index, 1);
+  AddRemedy(remedio : IRemedy){
+    this.taskService.AddRemedy(remedio).subscribe((remedio) => {
+      this.remedios.push(remedio)
+    })
   }
 }

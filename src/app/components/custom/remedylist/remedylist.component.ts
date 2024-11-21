@@ -1,13 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { RemedyService } from '../../../services/remedy.service';
+import { IRemedy } from '../../../models/IRemedy';
 
 @Component({
   selector: 'app-remedylist',
   templateUrl: './remedylist.component.html',
   styleUrl: './remedylist.component.css'
 })
-export class RemedylistComponent {
-  medicacoes = [
-    {nomeRemedio: 'Remédio', horario: '20:00', quantidade:'10ML', vezes:'1x por dia'},
-    {nomeRemedio: 'Remédio', horario: '20:00', quantidade:'10ML', vezes:'1x por dia'},
-  ];
+export class RemedylistComponent implements OnInit{
+  remedios: IRemedy[] = [];
+
+  constructor(private taskService:RemedyService){
+
+  }
+  ngOnInit(): void{
+
+    this.taskService.getRemedy().subscribe((dado) => {
+      this.remedios = dado;
+      console.log(dado);
+    });
+  }
 }

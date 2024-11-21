@@ -20,3 +20,18 @@
   font-size: smaller;
   color: #818181;
 }
+a{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 20px;
+  text-align: center;
+}
+mat-icon{
+ color: #876E9B;
+ font-size: 20px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}

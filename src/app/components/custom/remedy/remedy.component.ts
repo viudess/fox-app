@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { IRemedy } from '../../../models/IRemedy';
 
 @Component({
   selector: 'app-remedy',
@@ -6,8 +7,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './remedy.component.css'
 })
 export class RemedyComponent {
-  @Input() nomeRemedio!: string;
-  @Input() horario!: string;
-  @Input() quantidade!: string;
-  @Input() vezes!: string;
+  @Input() remedio!: IRemedy;
 }
