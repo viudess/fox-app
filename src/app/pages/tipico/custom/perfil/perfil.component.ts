@@ -6,14 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './perfil.component.css'
 })
 export class PerfilComponent{
-
   nome = 'Nome de usuário'
   neurotipo = 'Neuro(a)tipica'
   imagem = 'perfil.png'
 
-  wishlist = [
-    {wish:'Dinheiro'},
-    {wish:'Casa'},
-    {wish:'Felicidade'},
-  ]
 }

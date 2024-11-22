@@ -1,10 +1,14 @@
-.wishes{
+h2{
+  padding: 5px;
+}
+
+.remedio{
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: left;
   padding: 5px;
-  padding-left: 20px;
+  padding-left: 0;
 }
 .bola{
   background-color: #876E9B;
@@ -13,25 +17,10 @@
   margin-right: 10px;
   border-radius: 100%;
 }
-.wishes h1{
+.remedio h1{
   font-size: medium;
 }
-.wishes p{
+.remedio p{
   font-size: smaller;
   color: #818181;
-}
-a{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding-right: 20px;
-  text-align: center;
-}
-mat-icon{
- color: #876E9B;
- font-size: 20px;
- display: flex;
- align-items: center;
- justify-content: center;
 }

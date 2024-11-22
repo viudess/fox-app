@@ -1,17 +1,6 @@
-<main>
-  <header>
-    <mat-icon onclick="window.history.back()">arrow_back_ios</mat-icon>
-    <h1>Adicionar desejo</h1>
-  </header>
-</main>
-<main>
-  <section>
-    <input type="text" placeholder="Qual o seu desejo?">
-    <input type="text" placeholder="Como deseja realizar?">
-    <div class="descricao">
-      <h1>Descrição do desejo</h1>
-      <input type="text" placeholder="Digite aqui...">
-    </div>
-    <button class="concluir" routerLink="/perfil">Adicionar</button>
-  </section>
-</main>
+<app-wishform (onAddWish)="AddWish($event)"></app-wishform>
+<app-wishcomp
+  class="hidden"
+  *ngFor="let desejo of desejos"
+  [desejo]="desejo"
+></app-wishcomp>

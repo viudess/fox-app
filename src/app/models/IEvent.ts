@@ -3,5 +3,5 @@ export interface IEvent {
   titulo: string,
   data: string,
   horario: string,
-  observacao: string,
+  observacao: string
 }

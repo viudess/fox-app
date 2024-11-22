@@ -1,4 +1,6 @@
 export interface IWish {
   id?: number,
-  desejo: string,
+  titulo: string,
+  realizar: string,
+  observacao: string
 }

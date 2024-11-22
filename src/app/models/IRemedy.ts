@@ -4,5 +4,5 @@ export interface IRemedy {
   horario: string,
   estoque: string,
   quantia: string,
-  observacao: string,
+  observacao: string
 }

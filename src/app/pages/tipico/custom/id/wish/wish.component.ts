@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { IWish } from '../../../../../models/IWish';
+import { ActivatedRoute } from '@angular/router';
+import { WishService } from '../../../../../services/wish.service';
 
 @Component({
   selector: 'app-wish',
@@ -6,19 +9,52 @@ import { Component } from '@angular/core';
   styleUrl: './wish.component.css'
 })
 export class WishComponent {
-  horarios: { hora: string, minuto: string, periodo: string }[] = [
-    { hora: '', minuto: '', periodo: 'AM' }
-  ];
+  desejo: IWish | null = null;
 
-  alternarAmPm(index: number) {
-    this.horarios[index].periodo = this.horarios[index].periodo === 'AM' ? 'PM' : 'AM';
+  constructor(
+    private route: ActivatedRoute,
+    private remedioService: WishService
+  ) {}
+
+  ngOnInit(): void {
+    const idParam = this.route.snapshot.paramMap.get('id');
+
+    if (!idParam) {
+      console.error('ID inválido:', idParam);
+      return;
+    }
+
+    const id = String(idParam);
+
+    this.remedioService.getWishById(id).subscribe(
+      (data) => {
+        this.desejo = data;
+        console.log('Remédio carregado:', this.desejo);
+      },
+      (error) => {
+        console.error('Erro ao buscar o remédio:', error);
+        this.desejo = null;
+      }
+    );
   }
 
-  adicionarHorario() {
-    this.horarios.push({ hora: '', minuto: '', periodo: 'AM' });
-  }
 
-  removerHorario(index: number) {
-    this.horarios.splice(index, 1);
+  deleteWish(): void {
+    const id = this.desejo?.id;
+
+    if (!id) {
+      console.error('ID do remédio não encontrado para deletar');
+      return;
+    }
+
+    this.remedioService.deleteWishById(id).subscribe(
+      () => {
+        console.log('Remédio deletado com sucesso');
+        window.history.back();
+      },
+      (error) => {
+        console.error('Erro ao deletar o remédio:', error);
+      }
+    );
   }
 }

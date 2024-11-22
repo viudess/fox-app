@@ -5,7 +5,7 @@
 <main>
   <form (ngSubmit)="onSubmit()">
     <section>
-      <input type="text" placeholder="Nome do medicamento" [(ngModel)]="evento" name="titulo">
+      <input type="text" placeholder="Nome do evento" [(ngModel)]="evento" name="titulo">
       <div class="horario">
         <input type="number" placeholder="Hora" [(ngModel)]="hora" name="hora" (input)="atualizarHorario()">
         <input type="number" placeholder="Minuto" [(ngModel)]="minuto" name="minuto" (input)="atualizarHorario()">
@@ -20,7 +20,7 @@
         <h1>Observação</h1>
         <input type="text" [(ngModel)]="observacao" placeholder="Digite aqui..." name="observacao">
       </div>
-      <button type="submit" class="concluir" onclick="window.history.back()">Adicionar medicamento</button>
+      <button type="submit" class="concluir" onclick="window.history.back()">Adicionar evento</button>
     </section>
   </form>
 </main>

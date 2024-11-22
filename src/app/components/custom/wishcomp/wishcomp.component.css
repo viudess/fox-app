@@ -1,0 +1,36 @@
+.wishes{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: left;
+  padding: 5px;
+}
+.bola{
+  background-color: #876E9B;
+  width: 10px;
+  height: 10px;
+  margin-right: 15px;
+  border-radius: 100%;
+}
+.wishes h1{
+  font-size: medium;
+}
+.wishes p{
+  font-size: smaller;
+  color: #818181;
+}
+a{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 20px;
+  text-align: center;
+}
+mat-icon{
+ color: #876E9B;
+ font-size: 20px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}

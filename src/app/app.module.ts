@@ -72,6 +72,8 @@ import { WishComponent } from './pages/tipico/custom/id/wish/wish.component';
 import { AddremedyComponent } from './components/custom/addremedy/addremedy.component';
 import { AddeventComponent } from './components/order/addevent/addevent.component';
 import { EventinfoComponent } from './pages/tipico/order/id/eventinfo/eventinfo.component';
+import { WishcompComponent } from './components/custom/wishcomp/wishcomp.component';
+import { WishformComponent } from './components/custom/wishform/wishform.component';
 
 @NgModule({
   declarations: [
@@ -131,6 +133,8 @@ import { EventinfoComponent } from './pages/tipico/order/id/eventinfo/eventinfo.
     AddremedyComponent,
     AddeventComponent,
     EventinfoComponent,
+    WishcompComponent,
+    WishformComponent,
   ],
   imports: [
     BrowserModule,

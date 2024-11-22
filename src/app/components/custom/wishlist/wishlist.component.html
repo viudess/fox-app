@@ -1,7 +1,14 @@
-<a>
-  <div class="wishes">
+<ng-container *ngIf="desejos && desejos.length > 0; else noWishes">
+  <ng-container *ngFor="let desejo of desejos">
+    <app-wishcomp
+      [desejo]="desejo"
+    ></app-wishcomp>
+  </ng-container>
+</ng-container>
+
+<ng-template #noWishes>
+  <div class="remedio">
     <div class="bola"></div>
-    <h1>{{wish}}</h1>
+    <h2>Não há desejos</h2>
   </div>
-  <button><mat-icon>close</mat-icon></button>
-</a>
+</ng-template>

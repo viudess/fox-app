@@ -1,0 +1,19 @@
+<main>
+  <header>
+    <mat-icon onclick="window.history.back()">arrow_back_ios</mat-icon>
+    <h1>Adicionar desejo</h1>
+  </header>
+</main>
+<main>
+  <form (ngSubmit)="onSubmit()">
+    <section>
+      <input type="text" placeholder="Qual o seu desejo?" [(ngModel)]="desejo" name="titulo">
+      <input type="text" [(ngModel)]="realizar" placeholder="Como deseja realizar?" name="estoque">
+      <div class="descricao">
+        <h1>Descrição do desejo</h1>
+        <input type="text" [(ngModel)]="observacao" placeholder="Digite aqui..." name="observacao">
+      </div>
+      <button type="submit" class="concluir" onclick="window.history.back()">Adicionar desejo</button>
+    </section>
+  </form>
+</main>

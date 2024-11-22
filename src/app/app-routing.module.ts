@@ -35,6 +35,7 @@ import { PerfilAtipComponent } from './pages/atipico/custom/perfil-atip/perfil-a
 import { CrisissettingsComponent } from './pages/atipico/crisissettings/crisissettings.component';
 import { MoodregisterComponent } from './pages/tipico/mood/id/moodregister/moodregister.component';
 import { EventinfoComponent } from './pages/tipico/order/id/eventinfo/eventinfo.component';
+import { WishComponent } from './pages/tipico/custom/id/wish/wish.component';
 
 const routes: Routes = [
   //tipico
@@ -57,6 +58,7 @@ const routes: Routes = [
   { path: 'addmed', component: AddmedicationComponent },
   { path: 'addwish', component: AddwishComponent },
   { path: 'medication/:id', component: MedicationComponent },
+  { path: 'wish/:id', component: WishComponent },
 
   //log
   { path: 'register', component: RegisterComponent },

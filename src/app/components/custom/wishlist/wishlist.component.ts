@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { IWish } from '../../../models/IWish';
+import { WishService } from '../../../services/wish.service';
 
 @Component({
   selector: 'app-wishlist',
@@ -6,5 +8,16 @@ import { Component, Input } from '@angular/core';
   styleUrl: './wishlist.component.css'
 })
 export class WishlistComponent {
-  @Input() wish!: string;
+  desejos: IWish[] = [];
+
+  constructor(private taskService:WishService){
+
+  }
+  ngOnInit(): void{
+
+    this.taskService.getWish().subscribe((dado) => {
+      this.desejos = dado;
+      console.log(dado);
+    });
+  }
 }
