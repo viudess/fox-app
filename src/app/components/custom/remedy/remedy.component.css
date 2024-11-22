@@ -4,6 +4,7 @@
   flex-direction: row;
   justify-content: left;
   padding: 5px;
+  padding-left: 0;
 }
 .bola{
   background-color: #876E9B;

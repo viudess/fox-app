@@ -1,9 +1,9 @@
-<a routerLink="/medication">
+<a [routerLink]="['/medication', remedio.id]">
   <div class="remedio">
     <div class="bola"></div>
     <div>
-      <h1>{{remedio.titulo}}</h1>
-      <p>{{remedio.quantia}}ML - {{remedio.horario}}</p>
+      <h1>{{ remedio.titulo }}</h1>
+      <p>{{ remedio.quantia }}ML - {{ remedio.horario }}</p>
     </div>
   </div>
 </a>

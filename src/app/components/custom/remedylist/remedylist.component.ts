@@ -20,4 +20,5 @@ export class RemedylistComponent implements OnInit{
       console.log(dado);
     });
   }
+
 }

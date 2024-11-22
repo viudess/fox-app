@@ -7,6 +7,7 @@ import { IRemedy } from '../../../models/IRemedy';
   styleUrl: './addremedy.component.css'
 })
 export class AddremedyComponent {
+
   @Output() onAddRemedy = new EventEmitter<IRemedy>();
 
   remedio: string = '';
@@ -14,13 +15,13 @@ export class AddremedyComponent {
   minuto: number | null = null;
   periodo: string = 'AM';
   horario: string = '';
+  estoque: string = '';
   quantia: string = '';
   observacao: string = '';
 
   alternarAmPm() {
     this.periodo = this.periodo === 'AM' ? 'PM' : 'AM';
   }
-
 
   atualizarHorario() {
     const horaStr = this.hora !== null ? this.hora.toString().padStart(2, '0') : '00';
@@ -37,18 +38,20 @@ export class AddremedyComponent {
 
     const novoRemedio: IRemedy = {
       titulo: this.remedio,
-      quantia: this.quantia,
       horario: this.horario,
+      estoque: this.estoque,
+      quantia: this.quantia,
       observacao: this.observacao
     };
 
     this.onAddRemedy.emit(novoRemedio);
 
     this.remedio = '';
+    this.horario = '';
+    this.estoque = '',
     this.quantia = '';
     this.observacao = '';
-    this.horario = '';
-  }
 
+  }
 }
 

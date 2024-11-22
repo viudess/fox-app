@@ -54,7 +54,7 @@ const routes: Routes = [
   { path: 'perfilsettings', component: PerfilsettingsComponent },
   { path: 'addmed', component: AddmedicationComponent },
   { path: 'addwish', component: AddwishComponent },
-  { path: 'medication', component: MedicationComponent },
+  { path: 'medication/:id', component: MedicationComponent },
 
   //log
   { path: 'register', component: RegisterComponent },

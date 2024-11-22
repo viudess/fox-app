@@ -11,6 +11,7 @@
         <input type="number" placeholder="Minuto" [(ngModel)]="minuto" name="minuto" (input)="atualizarHorario()">
         <button type="button" (click)="alternarAmPm(); atualizarHorario()">{{ periodo }}</button>
       </div>
+      <input type="text" [(ngModel)]="estoque" placeholder="Estoque" name="estoque">
       <input type="text" [(ngModel)]="quantia" placeholder="Dosagem (ML)" name="quantia">
       <div class="descricao">
         <h1>Observação</h1>

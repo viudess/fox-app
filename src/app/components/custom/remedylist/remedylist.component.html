@@ -1,4 +1,13 @@
-<app-remedy
-  *ngFor="let remedio of remedios"
-  [remedio]="remedio"
-></app-remedy>
+<ng-container *ngIf="remedios && remedios.length > 0; else noRemedys">
+  <ng-container *ngFor="let remedio of remedios">
+    <app-remedy
+      [remedio]="remedio"
+    ></app-remedy>
+  </ng-container>
+</ng-container>
+
+<ng-template #noRemedys>
+  <div>
+    <h2>Não há remédios</h2>
+  </div>
+</ng-template>

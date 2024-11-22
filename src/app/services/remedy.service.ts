@@ -17,8 +17,12 @@ export class RemedyService {
     return this.http.get<IRemedy[]>(this.apiURL)
   }
 
-  deleteRemedy(remedio : IRemedy) : Observable<IRemedy>{
-    return this.http.delete<IRemedy>(`${this.apiURL}/${remedio.id}`)
+  getRemedyById(id: string | number): Observable<IRemedy> {
+    return this.http.get<IRemedy>(`${this.apiURL}/${id}`);
+  }
+
+  deleteRemedyById(id: string | number): Observable<void> {
+    return this.http.delete<void>(`${this.apiURL}/${id}`);
   }
 
   updateRemedy(remedio : IRemedy) : Observable<IRemedy>{
