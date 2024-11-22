@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { EventService } from '../../../services/event.service';
+import { IEvent } from '../../../models/IEvent';
 
 @Component({
   selector: 'app-eventlist',
@@ -6,8 +8,16 @@ import { Component } from '@angular/core';
   styleUrl: './eventlist.component.css'
 })
 export class EventlistComponent {
-  eventos=[
-    {nomeEvento: 'Evento', data: '31/10', horario:'20:00'},
-    {nomeEvento: 'Evento', data: '31/10', horario:'20:00'},
-  ]
+  eventos: IEvent[] = [];
+
+  constructor(private taskService:EventService){
+
+  }
+  ngOnInit(): void{
+
+    this.taskService.getEvent().subscribe((dado) => {
+      this.eventos = dado;
+      console.log(dado);
+    });
+  }
 }

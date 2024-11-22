@@ -1,7 +1,10 @@
-<div class="evento">
-  <div class="bola"></div>
-  <div>
-    <h1>{{nomeEvento}}</h1>
-    <p>{{data}} - {{horario}}</p>
+<a [routerLink]="['/eventinfo', evento.id]">
+  <div class="evento">
+    <div class="bola"></div>
+    <div>
+      <h1>{{evento.titulo}}</h1>
+      <p>{{evento.data}} - {{evento.horario}}</p>
+    </div>
   </div>
-</div>
+</a>
+

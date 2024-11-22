@@ -1,5 +1,26 @@
 h2{
-  text-align: center;
   padding: 5px;
-  padding-right: 25px;
+}
+
+.remedio{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: left;
+  padding: 5px;
+  padding-left: 0;
+}
+.bola{
+  background-color: #876E9B;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  border-radius: 100%;
+}
+.remedio h1{
+  font-size: medium;
+}
+.remedio p{
+  font-size: smaller;
+  color: #818181;
 }

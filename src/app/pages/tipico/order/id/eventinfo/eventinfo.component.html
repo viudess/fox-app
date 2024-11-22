@@ -1,0 +1,34 @@
+<header>
+  <mat-icon onclick="window.history.back()">arrow_back_ios</mat-icon>
+  <h1>Medicamentos - Ficha</h1>
+</header>
+<section *ngIf="evento; else notFound">
+  <div>
+    <h2>Nome:</h2>
+    <h2>{{evento.titulo}}</h2>
+  </div>
+
+  <div>
+    <h2>Horario:</h2>
+    <h2>{{evento.horario}}</h2>
+  </div>
+
+  <div>
+    <h2>Data</h2>
+    <h2>{{evento.data}}</h2>
+  </div>
+
+  <h3>Observação</h3>
+  <div class="observacao">
+    <p>{{evento.observacao}}</p>
+  </div>
+
+  <div class="excluir" (click)="deleteEvent()">
+    <h4>Deletar</h4>
+  </div>
+
+</section>
+
+<ng-template #notFound>
+  <h2>Remédio não encontrado</h2>
+</ng-template>

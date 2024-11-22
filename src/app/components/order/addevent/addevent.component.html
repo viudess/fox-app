@@ -1,0 +1,26 @@
+<header>
+  <mat-icon onclick="window.history.back()">arrow_back_ios</mat-icon>
+  <h1>Criar Evento</h1>
+</header>
+<main>
+  <form (ngSubmit)="onSubmit()">
+    <section>
+      <input type="text" placeholder="Nome do medicamento" [(ngModel)]="evento" name="titulo">
+      <div class="horario">
+        <input type="number" placeholder="Hora" [(ngModel)]="hora" name="hora" (input)="atualizarHorario()">
+        <input type="number" placeholder="Minuto" [(ngModel)]="minuto" name="minuto" (input)="atualizarHorario()">
+        <button type="button" (click)="alternarAmPm(); atualizarHorario()">{{ periodo }}</button>
+      </div>
+      <div class="horario">
+        <input type="number" placeholder="Dia" [(ngModel)]="dia" name="dia" (input)="atualizarData()">
+        <input type="number" placeholder="Mês" [(ngModel)]="mes" name="mes" (input)="atualizarData()">
+        <input type="number" placeholder="Ano" [(ngModel)]="ano" name="ano" (input)="atualizarData()">
+      </div>
+      <div class="descricao">
+        <h1>Observação</h1>
+        <input type="text" [(ngModel)]="observacao" placeholder="Digite aqui..." name="observacao">
+      </div>
+      <button type="submit" class="concluir" onclick="window.history.back()">Adicionar medicamento</button>
+    </section>
+  </form>
+</main>

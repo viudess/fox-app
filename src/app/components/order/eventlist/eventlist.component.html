@@ -1,7 +1,14 @@
-<app-event
-*ngFor="let evento of eventos"
-[nomeEvento]="evento.nomeEvento"
-[data]="evento.data"
-[horario]="evento.horario"
->
-</app-event>
+<ng-container *ngIf="eventos && eventos.length > 0; else noEvents">
+  <ng-container *ngFor="let evento of eventos">
+    <app-event
+      [evento]="evento"
+    ></app-event>
+  </ng-container>
+</ng-container>
+
+<ng-template #noEvents>
+  <div class="evento">
+    <div class="bola"></div>
+    <h2>Não há eventos</h2>
+  </div>
+</ng-template>

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { IEvent } from '../../../../models/IEvent';
+import { EventService } from '../../../../services/event.service';
 
 @Component({
   selector: 'app-addcalendar',
@@ -6,14 +8,22 @@ import { Component } from '@angular/core';
   styleUrl: './addcalendar.component.css'
 })
 export class AddcalendarComponent {
-  clicado: number | null = 0;
-  periodo: string = 'AM';
+  eventos: IEvent[] = [];
 
-  mudarCor(index: number) {
-    this.clicado = index;
+  constructor(private taskService:EventService){
+
+  }
+  ngOnInit(): void{
+
+    this.taskService.getEvent().subscribe((dado) => {
+      this.eventos = dado;
+      console.log(dado);
+    });
   }
 
-  alternarAmPm() {
-    this.periodo = this.periodo === 'AM' ? 'PM' : 'AM';
+  AddEvent(eventos : IEvent){
+    this.taskService.AddEvent(eventos).subscribe((evento) => {
+      this.eventos.push(evento)
+    })
   }
 }

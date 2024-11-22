@@ -34,6 +34,7 @@ import { TasksAtipComponent } from './pages/atipico/order/tasks-atip/tasks-atip.
 import { PerfilAtipComponent } from './pages/atipico/custom/perfil-atip/perfil-atip.component';
 import { CrisissettingsComponent } from './pages/atipico/crisissettings/crisissettings.component';
 import { MoodregisterComponent } from './pages/tipico/mood/id/moodregister/moodregister.component';
+import { EventinfoComponent } from './pages/tipico/order/id/eventinfo/eventinfo.component';
 
 const routes: Routes = [
   //tipico
@@ -49,6 +50,7 @@ const routes: Routes = [
   { path: 'tasks', component: TasksComponent },
   { path: 'addtasks', component: AddtasksComponent },
   { path: 'addcalendar', component: AddcalendarComponent },
+  { path: 'eventinfo/:id', component: EventinfoComponent },
 
   { path: 'perfil', component: PerfilComponent },
   { path: 'perfilsettings', component: PerfilsettingsComponent },

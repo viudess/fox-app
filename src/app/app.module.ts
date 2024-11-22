@@ -70,6 +70,8 @@ import { MoodlistComponent } from './components/mood/moodlist/moodlist.component
 import { AddtodoComponent } from './components/order/addtodo/addtodo.component';
 import { WishComponent } from './pages/tipico/custom/id/wish/wish.component';
 import { AddremedyComponent } from './components/custom/addremedy/addremedy.component';
+import { AddeventComponent } from './components/order/addevent/addevent.component';
+import { EventinfoComponent } from './pages/tipico/order/id/eventinfo/eventinfo.component';
 
 @NgModule({
   declarations: [
@@ -127,6 +129,8 @@ import { AddremedyComponent } from './components/custom/addremedy/addremedy.comp
     AddtodoComponent,
     WishComponent,
     AddremedyComponent,
+    AddeventComponent,
+    EventinfoComponent,
   ],
   imports: [
     BrowserModule,
