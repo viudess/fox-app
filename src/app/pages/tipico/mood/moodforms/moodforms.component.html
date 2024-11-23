@@ -7,11 +7,7 @@
     <app-daybuttom></app-daybuttom>
     <h1>Como você está se sentindo?</h1>
     <section>
-      <div class="gridblock-normal">
-        <div *ngFor="let emotion of emotions">
-          <app-emotion [title]="emotion.title" [image]="emotion.image"></app-emotion>
-        </div>
-      </div>
+      <app-emolist></app-emolist>
     </section>
     <form>
       <h1>Escreva sobre o que sente:</h1>

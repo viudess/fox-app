@@ -36,12 +36,14 @@ import { CrisissettingsComponent } from './pages/atipico/crisissettings/crisisse
 import { MoodregisterComponent } from './pages/tipico/mood/id/moodregister/moodregister.component';
 import { EventinfoComponent } from './pages/tipico/order/id/eventinfo/eventinfo.component';
 import { WishComponent } from './pages/tipico/custom/id/wish/wish.component';
+import { LawsComponent } from './pages/tipico/morehome/laws/laws.component';
 
 const routes: Routes = [
   //tipico
-  { path: '', redirectTo: '/splash', pathMatch: 'full', },
+  { path: '', redirectTo: '/atip', pathMatch: 'full', },
 
   { path: 'home', component: HometipComponent },
+  { path: 'laws', component: LawsComponent },
 
   { path: 'mood', component: MoodbegginComponent },
   { path: 'moodquest', component: MoodquestionComponent },

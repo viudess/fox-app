@@ -1,0 +1,29 @@
+[
+  {
+    "TEA": {
+      "title": "Pessoas com TEA",
+      "laws": [
+        {
+          "id": 1,
+          "name": "Lei nº 8.472/1993",
+          "artigos": [
+            {
+            "artigo": "Artigo 1º:",
+            "text": "A assistência social, direito do cidadão e dever do Estado, é Política de Seguridade Social não contributiva, que provê os mínimos sociais, realizada através de um conjunto integrado de ações de iniciativa pública e da sociedade, para garantir o atendimento às necessidades básicas."
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Lei Berenice Piana – Lei nº 12.764/2012",
+          "artigos": [
+            {
+            "artigo": "Artigo 7º:",
+            "text": "O gestor escolar, ou autoridade competente, que recusar a matrícula de aluno com transtorno do espectro autista, ou qualquer outro tipo de deficiência, será punido com multa de 3 (três) a 20 (vinte) salários-mínimos."
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

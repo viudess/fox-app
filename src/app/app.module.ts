@@ -74,6 +74,10 @@ import { AddeventComponent } from './components/order/addevent/addevent.componen
 import { EventinfoComponent } from './pages/tipico/order/id/eventinfo/eventinfo.component';
 import { WishcompComponent } from './components/custom/wishcomp/wishcomp.component';
 import { WishformComponent } from './components/custom/wishform/wishform.component';
+import { EmolistComponent } from './components/mood/emolist/emolist.component';
+import { LawsComponent } from './pages/tipico/morehome/laws/laws.component';
+import { CaaComponent } from './pages/tipico/morehome/caa/caa.component';
+import { SocialstoriesComponent } from './pages/tipico/morehome/socialstories/socialstories.component';
 
 @NgModule({
   declarations: [
@@ -135,6 +139,10 @@ import { WishformComponent } from './components/custom/wishform/wishform.compone
     EventinfoComponent,
     WishcompComponent,
     WishformComponent,
+    EmolistComponent,
+    LawsComponent,
+    CaaComponent,
+    SocialstoriesComponent,
   ],
   imports: [
     BrowserModule,
